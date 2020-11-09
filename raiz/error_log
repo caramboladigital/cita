@@ -1,0 +1,236 @@
+[08-Nov-2020 21:23:16 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:23:16 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:23:16 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 156
+[08-Nov-2020 21:23:16 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 157
+[08-Nov-2020 21:23:16 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 28
+[08-Nov-2020 21:23:16 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 29
+[08-Nov-2020 21:23:19 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:23:19 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:23:19 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 156
+[08-Nov-2020 21:23:19 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 157
+[08-Nov-2020 21:23:19 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 28
+[08-Nov-2020 21:23:19 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 29
+[08-Nov-2020 21:23:21 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:23:21 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:23:21 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 156
+[08-Nov-2020 21:23:21 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 157
+[08-Nov-2020 21:23:21 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 28
+[08-Nov-2020 21:23:21 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 29
+[08-Nov-2020 21:24:41 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:24:41 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:24:41 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 156
+[08-Nov-2020 21:24:41 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 157
+[08-Nov-2020 21:24:41 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 28
+[08-Nov-2020 21:24:41 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 29
+[08-Nov-2020 21:24:46 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:24:46 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:24:46 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 156
+[08-Nov-2020 21:24:46 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 157
+[08-Nov-2020 21:24:46 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 28
+[08-Nov-2020 21:24:46 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 29
+[08-Nov-2020 21:24:49 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 3
+[08-Nov-2020 21:24:49 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 3
+[08-Nov-2020 21:24:49 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 27
+[08-Nov-2020 21:24:49 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 27
+[08-Nov-2020 21:24:49 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 28
+[08-Nov-2020 21:24:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 28
+[08-Nov-2020 21:24:52 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/listaAutor.php on line 3
+[08-Nov-2020 21:24:52 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/listaAutor.php on line 3
+[08-Nov-2020 21:24:52 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutor.php on line 28
+[08-Nov-2020 21:24:52 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutor.php on line 28
+[08-Nov-2020 21:24:52 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutor.php on line 29
+[08-Nov-2020 21:24:52 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutor.php on line 29
+[08-Nov-2020 21:24:59 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/logout.php on line 2
+[08-Nov-2020 21:24:59 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/logout.php on line 2
+[08-Nov-2020 21:24:59 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:24:59 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:24:59 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:24:59 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:25:02 UTC] PHP Warning:  include_once(inc/session.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 2
+[08-Nov-2020 21:25:02 UTC] PHP Warning:  include_once(): Failed opening 'inc/session.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 2
+[08-Nov-2020 21:25:02 UTC] PHP Warning:  include_once(inc/conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:25:02 UTC] PHP Warning:  include_once(): Failed opening 'inc/conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:25:02 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:25:02 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:25:02 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:25:02 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:25:02 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:25:02 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:25:02 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:25:02 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:25:02 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:25:02 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:25:02 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:25:02 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:25:14 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:25:14 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:25:14 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 156
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 157
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 28
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 29
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:25:14 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:25:25 UTC] PHP Warning:  include_once(inc/session.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 2
+[08-Nov-2020 21:25:25 UTC] PHP Warning:  include_once(): Failed opening 'inc/session.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 2
+[08-Nov-2020 21:25:25 UTC] PHP Warning:  include_once(inc/conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:25:25 UTC] PHP Warning:  include_once(): Failed opening 'inc/conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:25:25 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:25:25 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:25:25 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:25:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:25:25 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:25:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:25:25 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:25:25 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:25:25 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:25:25 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:25:25 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:25:25 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:25:28 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 3
+[08-Nov-2020 21:25:28 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 3
+[08-Nov-2020 21:25:28 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:25:28 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:25:28 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:25:28 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 17
+[08-Nov-2020 21:25:28 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 27
+[08-Nov-2020 21:25:28 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 27
+[08-Nov-2020 21:25:28 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 28
+[08-Nov-2020 21:25:28 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 28
+[08-Nov-2020 21:25:28 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:25:28 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:25:28 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:25:50 UTC] PHP Warning:  include_once(inc/session.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 2
+[08-Nov-2020 21:25:50 UTC] PHP Warning:  include_once(): Failed opening 'inc/session.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 2
+[08-Nov-2020 21:25:50 UTC] PHP Warning:  include_once(inc/conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:25:50 UTC] PHP Warning:  include_once(): Failed opening 'inc/conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:25:50 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:25:50 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:25:50 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:25:50 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:25:50 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:25:50 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:25:50 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:25:50 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:25:50 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:25:50 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:25:50 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:25:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:28:04 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 3
+[08-Nov-2020 21:28:04 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 3
+[08-Nov-2020 21:28:04 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:28:04 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:28:04 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:28:04 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 17
+[08-Nov-2020 21:28:04 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 27
+[08-Nov-2020 21:28:04 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 27
+[08-Nov-2020 21:28:04 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 28
+[08-Nov-2020 21:28:04 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 28
+[08-Nov-2020 21:28:04 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:28:04 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:28:04 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:28:16 UTC] PHP Warning:  include_once(inc/session.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 2
+[08-Nov-2020 21:28:16 UTC] PHP Warning:  include_once(): Failed opening 'inc/session.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 2
+[08-Nov-2020 21:28:16 UTC] PHP Warning:  include_once(inc/conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:28:16 UTC] PHP Warning:  include_once(): Failed opening 'inc/conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:28:16 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:28:16 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:28:16 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:28:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:28:16 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:28:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:28:16 UTC] PHP Notice:  Undefined variable: _SESSION in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:28:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:28:16 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:28:16 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:28:16 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:28:16 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:35:32 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:35:32 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:35:32 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:35:32 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:35:32 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:35:32 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:35:32 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:35:32 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:35:32 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:35:32 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:35:32 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:35:34 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/logout.php on line 2
+[08-Nov-2020 21:35:34 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/logout.php on line 2
+[08-Nov-2020 21:35:34 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:35:34 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:35:34 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:35:34 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:35:45 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:35:45 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:35:45 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:35:45 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:35:45 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:35:45 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:35:45 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:35:45 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:35:45 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:35:45 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:35:45 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:39:13 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:39:13 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:39:13 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:39:13 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:39:13 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:39:13 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:39:13 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:39:13 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:39:13 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:39:13 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:39:13 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:39:15 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 3
+[08-Nov-2020 21:39:15 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 3
+[08-Nov-2020 21:39:15 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:39:15 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:39:15 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:39:15 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 17
+[08-Nov-2020 21:39:15 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 27
+[08-Nov-2020 21:39:15 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 27
+[08-Nov-2020 21:39:15 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 28
+[08-Nov-2020 21:39:15 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/listaAutorPublicacao.php on line 28
+[08-Nov-2020 21:39:15 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:39:15 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:39:15 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:39:26 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:39:26 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:39:26 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:39:26 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:39:26 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:39:26 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:39:26 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:39:26 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:39:26 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:39:26 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:39:26 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/index.php on line 3
+[08-Nov-2020 21:39:30 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:39:30 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:39:30 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 156
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_funcoes.php on line 157
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 28
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/index.php on line 29
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/login.php on line 3
+[08-Nov-2020 21:39:30 UTC] PHP Warning:  mysqli_close() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/inc/i_desconectaDB.php on line 3
+[08-Nov-2020 21:39:37 UTC] PHP Warning:  include_once(inc/i_conectaDB.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:39:37 UTC] PHP Warning:  include_once(): Failed opening 'inc/i_conectaDB.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 3
+[08-Nov-2020 21:39:37 UTC] PHP Warning:  include_once(funcoes.php): failed to open stream: No such file or directory in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:39:37 UTC] PHP Warning:  include_once(): Failed opening 'funcoes.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/carambol/public_html/citacoes/verificaLogin.php on line 4
+[08-Nov-2020 21:39:37 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 20
+[08-Nov-2020 21:39:37 UTC] PHP Notice:  Undefined index: ehAdmin in /home/carambol/public_html/citacoes/inc/i_topo.php on line 35
+[08-Nov-2020 21:39:37 UTC] PHP Notice:  Undefined index: UsuNome in /home/carambol/public_html/citacoes/inc/i_topo.php on line 46
+[08-Nov-2020 21:39:37 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:39:37 UTC] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 24
+[08-Nov-2020 21:39:37 UTC] PHP Notice:  Undefined variable: connection in /home/carambol/public_html/citacoes/verificaLogin.php on line 25
+[08-Nov-2020 21:39:37 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/carambol/public_html/citacoes/verificaLogin.php on line 25

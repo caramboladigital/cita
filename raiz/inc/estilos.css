@@ -1,0 +1,250 @@
+body {
+    font-family: Roboto, "Trebuchet MS", Verdana, "sans-serif";
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #eee;
+    color: #000;
+}
+
+
+/* TOPO  */
+
+#topo {
+    max-width: 960px;
+    margin: 0 auto;
+    height: 130px;
+    background-color: #ed6f24;
+}
+
+#logoCitacoes {
+    width: 290px;
+    height: 89px;
+    /* float: left; */
+}
+
+#logoCarambola {
+    width: 220px;
+    height: 128px;
+    /*float: right; */
+}
+
+
+/* ELEMENTOS */
+
+#divGeral {
+    max-width: 960px;
+    margin: 0 auto 50px;
+    padding: 0 30px;
+}
+
+#divLogin {
+    width: 300px;
+    margin: 50px auto 50px;
+}
+
+#divBotao {
+    max-width: 960px;
+}
+
+
+#divUsuario {
+    font-size: 12px;
+    float: right;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0 10px 0;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    margin: 5px 0 5px 0;
+}
+
+a {
+    color: #f5860e; 
+}
+
+input {
+    font-size: 14px;
+}
+
+form input, form textarea{
+    font-family: Roboto, "Trebuchet MS", Verdana, "sans-serif";
+    font-size: 14px;
+}
+
+.espaco30 {
+    width: 10px;
+    height: 30px;
+}
+
+.espaco60 {
+    width: 10px;
+    height: 60px;
+}
+
+.ico {
+    padding: 0 5px 0 0;
+}
+
+.blocoPublicacao {
+    border-top: solid 2px #000;
+    /*    border-bottom: solid 2px #000; */
+    font-size: 18px;
+    padding: 16px 0;
+    margin-top: 16px;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+.artigo {
+    font-style: italic;
+}
+
+.url {
+    text-decoration: underline;
+}
+
+.blocoCitacao {
+    margin-left: 10px;
+}
+
+.sobrenome {
+    text-transform: uppercase;
+}
+
+.nome {
+
+}
+
+.pg {}
+
+.citacao {
+    font-size: 16px;
+
+}
+
+.comentario {
+    color: #555;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.listaPalavra {
+    width: 200px;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+#divAutor {
+    float: left;
+    width: 350px;
+}
+
+#divPublicacao {
+    float: left;
+    width: 400px;
+}
+
+#divPalavra {
+    float: left;
+    width: 350px;
+}
+
+#divCitacao {
+    float: left;
+    width: 400px;
+}
+
+#elo {
+    float: left;
+    margin: 190px 20px;
+    width: 150px;
+    height: 90px;
+}
+
+
+
+td.alinharPorCima {
+    vertical-align: top;
+    padding-right: 20px;
+}
+
+.botao:hover {
+    cursor: pointer;
+}
+
+.botao {
+    cursor: pointer;
+    background-color: #888;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 10px 5px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+}
+
+/* MODAL */
+
+.modal {
+   /*  display: none; */
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #eee;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
