@@ -19,10 +19,6 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
     $row2 = mysqli_fetch_assoc( $result2 );
     $nString = implode( $row2 );
     $nNumero = intval($nString);
-
-    //echo $nString . "<br />";
-
-    // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
       echo "Publicação <strong>" . $row1[ "PubTitulo" ] .  "</strong> não tem nenhum autor! <br />";
       echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdPublicacao=" . $row1[ "IdPublicacao" ] . "'>DELETA PUBLICAÇÃO</a>";  

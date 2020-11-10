@@ -2,7 +2,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Usuário</title>
+    <title>Cadastra usuário</title>
+    <?php include_once( "inc/i_links.php" ); ?>
 </head>
 
 <body>
@@ -16,13 +17,9 @@
         $hash = hash('sha256', $password);
 
     echo "hash:" . $hash;
-?>
-
-
-
+    ?>
 
     </div>
 </body>
 
 </html>
-<?php include_once( "inc/i_desconectaDB.php" ); ?>
