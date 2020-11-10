@@ -17,7 +17,7 @@ confirmacao_logado();
     <div id="divGeral">
         <?php include_once( "inc/i_topo.php" ); ?>
         
-        <h1><?php echo expressao("Busca por palavra-chave" , "enEN") ?></h1>
+        <h1>Busca por palavra-chave</h1>
         <p>Palavra (X) | X = número de vezes que a palavra foi associada a uma citação.</p>
         <p>
         <?php

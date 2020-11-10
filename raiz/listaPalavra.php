@@ -65,21 +65,16 @@ confirmacao_logado();
     <?php
     // SE VIER DO NADA, É LISTA
     // SE VIER COM GET, É PRA DELETAR A PALAVRA-CHAVE
-    
-
-    //modal ($id, $msg, $origem, $destino);
-
 
     if (empty(!$_GET)) {
         // echo "Tem GET sim";
         if (array_key_exists("msgDelIdPalavra",$_GET)) {
             $elemento = "Palavra: " . retornaPalavra( $_GET[ 'msgDelIdPalavra' ] );
-            modal ($_GET[ 'msgDelIdPalavra' ] , $elemento , "Você confirma que quer deletar a palavra-chave?", "commitDeletePalavra.php?IdPalavra=", "listaPalavra.php");
+            modal ($_GET[ 'msgDelIdPalavra' ] , $elemento , "Você confirma que quer deletar esta palavra-chave?", "commitDeletePalavra.php?IdPalavra=", "listaPalavra.php");
         }
     }
     include_once("inc/i_modal.php");
     ?>
-
 </body>
 
 </html>

@@ -90,32 +90,13 @@ confirmacao_logado();
     
     if (empty(!$_GET)) {
         // echo "Tem GET sim";
-
-        if (array_key_exists("msgDelIdPublicacao",$_GET)) {
-            echo "<div id='myModal' class='modal'>";
-                echo "<div class='modal-content'>";
-                    echo "<span class='close'>&times;</span>";
-                    mostraPublicacao($_GET[ 'msgDelIdPublicacao' ]);
-                    echo "<p>Você confirma que quer deletar a publicação?</p>";
-                    echo "<br />";
-                    echo "<a class='botao' href='commitDeletePublicacao.php?IdPublicacao=" . $_GET[ 'msgDelIdPublicacao' ] ."'>SIM</a>";
-                    echo "<a class='botao' href='listaAutorPublicacao.php'>NÃO</a>"; 
-                echo "</div>";
-            echo "</div>";
+        if (array_key_exists("msgDelIdPuplicacao",$_GET)) {
+            $elemento = "Publicação: " . retornaPublicacao( $_GET[ 'msgDelIdPublicacao' ] );
+            modal ($_GET[ 'msgDelIdPublicacao' ] , $elemento , "Você confirma que quer deletar esta publicação?", "commitDeletePublicacao.php?IdPublicacao=", "listaAutorPublicacao.php");
         }
-        /*if (array_key_exists("creIdAutor",$_GET)){
-            //echo "MSGBOX Confirma autor criado ";
-
-        } 
-        if (array_key_exists("delIdAutor",$_GET)) {
-            //echo "MSGBOX Confirma autor deletado";
-
-        }
-        if (array_key_exists("updIdAutor",$_GET)) {
-            //echo "MSGBOX Confirma autor atualizado";
-
-        }*/
     }
+
+
     include_once("inc/i_modal.php");
     ?>
 

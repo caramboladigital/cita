@@ -41,7 +41,7 @@ confirmacao_logado();
         }
 
         if (array_key_exists("msgDelIdPublicacao",$_GET)) {
-            $elemento = "Publicação: " . retornaPublicação( $_GET[ 'msgDelIdPublicacao' ] );
+            $elemento = "Publicação: " . retornaPublicacao( $_GET[ 'msgDelIdPublicacao' ] );
             modal ($_GET[ 'msgDelIdPublicacao' ] , $elemento , "Você confirma que quer deletar esta publicação?", "commitDeletePublicacao.php?IdPublicacao=", "listaSaudeDbCheckUp.php");
         }
 

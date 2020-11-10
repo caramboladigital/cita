@@ -29,6 +29,8 @@ if ( !$result2 ) {
     die( "2. Query falhou :" . $query2 );
 }
 
+$origem = $_GET[ 'origem' ];
+
 header( "Location: " . $origem );
 
 //mysqli_free_result( $result2 );

@@ -18,6 +18,8 @@ if ( !$result3 ) {
     die( "3. Query falhou." );
 }
 
+$origem = $_GET[ 'origem' ];
+
 header( "Location: " . $origem );
 
 mysqli_free_result( $result1 );

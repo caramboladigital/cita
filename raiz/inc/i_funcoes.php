@@ -77,6 +77,23 @@ function mostraCitacao( $IdCitacao ) {
     echo "<hr>";
 }
 
+function retornaCitacao( $IdCitacao ) {
+    global $connection;
+    $query = "SELECT * ";
+    $query .= "FROM citacao ";
+    $query .= "WHERE IdCitacao = " . $IdCitacao . " ";
+    $query .= "ORDER BY CitPg";
+    mysqli_set_charset( $connection, "utf8" );
+    $result = mysqli_query( $connection, $query );
+    if ( !$result ) {
+        die( "Query mostraCitacao falhou: ". $query );
+    }
+    $row = mysqli_fetch_assoc( $result );
+
+    $citacao =  substr( $row[ "CitCitacao" ], 0, 70) . "... ";
+    return $citacao;
+}
+
 
 
 function mostraAutor( $IdAutor ) {

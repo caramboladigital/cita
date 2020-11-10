@@ -134,6 +134,15 @@ confirmacao_logado();
     
     if (empty(!$_GET)) {
         // echo "Tem GET sim";
+        if (array_key_exists("msgDelIdCitacao",$_GET)) {
+            $elemento = "Citação: " . retornaCitacao( $_GET[ 'msgDelIdCitacao' ] );
+            modal ($_GET[ 'msgDelIdCitacao' ] , $elemento , "Você confirma que quer deletar esta citação?", "commitDeleteCitacao.php?IdCitacao=", "listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $IdPublicacao );
+        }
+    }
+
+/*
+    if (empty(!$_GET)) {
+        // echo "Tem GET sim";
 
         if (array_key_exists("msgDelIdCitacao",$_GET)) {
             echo "<div id='myModal' class='modal'>";
@@ -149,6 +158,8 @@ confirmacao_logado();
             echo "</div>";
         }
     }
+*/
+
     include_once("inc/i_modal.php");
     ?>
     
