@@ -34,7 +34,6 @@ confirmacao_logado();
     // SE VIER COM GET, É PRA DELETAR O AUTOR
      if (empty(!$_GET)) {
         // echo "Tem GET sim";
-
         if (array_key_exists("msgDelIdAutor",$_GET)) {
             $elemento = "Autor: " . retornaAutor( $_GET[ 'msgDelIdAutor' ] );
             modal ($_GET[ 'msgDelIdAutor' ] , $elemento , "Você confirma que quer deletar este autor?", "commitDeleteAutor.php?IdAutor=", "listaSaudeDbCheckUp.php");
@@ -45,54 +44,18 @@ confirmacao_logado();
             modal ($_GET[ 'msgDelIdPublicacao' ] , $elemento , "Você confirma que quer deletar esta publicação?", "commitDeletePublicacao.php?IdPublicacao=", "listaSaudeDbCheckUp.php");
         }
 
-        /*
-        if (array_key_exists("msgDelIdPublicacao", $_GET)) {
-            echo "<div id='myModal' class='modal'>";
-            echo "<div class='modal-content'>";
-            echo "<span class='close'>&times;</span>";
-            echo $row1[$_GET['msgDelIdPublicacao']];
-            echo "<p>Você confirma que quer deletar esta publicação ?</p>";
-            echo "<br />";
-            echo "<a class='botao' href='commitDeletePublicacao.php?IdPublicacao=" . $_GET['msgDelIdPublicacao'] . "'>SIM</a>";
-            echo "<a class='botao' href='listaSaudeDbCheckUp.php'>NÃO</a>";
-            echo "</div>";
-            echo "</div>";
+        if (array_key_exists("msgDelIdCitacao",$_GET)) {
+            $elemento = "Citação: " . retornaCitacao( $_GET[ 'msgDelIdCitacao' ] );
+            modal ($_GET[ 'msgDelIdCitacao' ] , $elemento , "Você confirma que quer deletar esta citação?", "commitDeleteCitacao.php?IdCitacao=", "listaSaudeDbCheckUp.php");
         }
-        */
-
-        if (array_key_exists("msgDelIdCitacao", $_GET)) {
-            echo "<div id='myModal' class='modal'>";
-            echo "<div class='modal-content'>";
-            echo "<span class='close'>&times;</span>";
-            echo $row1[$_GET['msgDelIdCitacao']];
-            echo "<p>Você confirma que quer deletar esta citação ?</p>";
-            echo "<br />";
-            echo "<a class='botao' href='commitDeleteCitacao.php?IdCitacao=" . $_GET['msgDelIdCitacao'] . "'>SIM</a>";
-            echo "<a class='botao' href='listaSaudeDbCheckUp.php'>NÃO</a>";
-            echo "</div>";
-            echo "</div>";
-        }
-
 
         if (array_key_exists("msgDelIdPalavra",$_GET)) {
             $elemento = "Palavra: " . retornaPalavra( $_GET[ 'msgDelIdPalavra' ] );
-            modal ($_GET[ 'msgDelIdPalavra' ] , $elemento , "Você confirma que quer deletar a palavra-chave?", "commitDeletePalavra.php?IdPalavra=", "listaSaudeDbCheckUp.php");
+            modal ($_GET[ 'msgDelIdPalavra' ] , $elemento , "Você confirma que quer deletar esta palavra-chave?", "commitDeletePalavra.php?IdPalavra=", "listaSaudeDbCheckUp.php");
         }
 
 
-/*
-        if (array_key_exists("msgDelIdPalavra", $_GET)) {
-            echo "<div id='myModal' class='modal'>";
-            echo "<div class='modal-content'>";
-            echo "<span class='close'>&times;</span>";
-            echo $row1[$_GET['msgDelIdPalavra']];
-            echo "<p>Você confirma que quer deletar esta palavra-chave ?</p>";
-            echo "<br />";
-            echo "<a class='botao' href='commitDeletePalavra.php?IdPalavra=" . $_GET['msgDelIdPalavra'] . "'>SIM</a>";
-            echo "<a class='botao' href='listaSaudeDbCheckUp.php'>NÃO</a>";
-            echo "</div>";
-            echo "</div>";
-        } */
+
     }
     include_once("inc/i_modal.php");
     ?>

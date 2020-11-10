@@ -26,7 +26,7 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
         //. $row1[ "AutSobrenome" ] . ", " .  $row1[ "AutNome" ] .  
-      echo "Citação: <br /><strong>" . $row1[ "CitCitacao" ] .  "</strong><br /> não tem relação com nenhuma publicação! <br />";
+      echo "Citação: <br /><strong>" . substr( $row1[ "CitCitacao" ], 0, 70) . "... " . "</strong><br /> não tem relação com nenhuma publicação! <br />";
       echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdCitacao=" . $row1[ "IdCitacao" ] . "'>DELETA CITAÇÃO</a>";
       echo "<hr>";
     }

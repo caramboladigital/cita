@@ -90,7 +90,7 @@ confirmacao_logado();
     
     if (empty(!$_GET)) {
         // echo "Tem GET sim";
-        if (array_key_exists("msgDelIdPuplicacao",$_GET)) {
+        if (array_key_exists("msgDelIdPublicacao",$_GET)) {
             $elemento = "Publicação: " . retornaPublicacao( $_GET[ 'msgDelIdPublicacao' ] );
             modal ($_GET[ 'msgDelIdPublicacao' ] , $elemento , "Você confirma que quer deletar esta publicação?", "commitDeletePublicacao.php?IdPublicacao=", "listaAutorPublicacao.php");
         }
