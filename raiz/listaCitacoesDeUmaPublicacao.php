@@ -106,8 +106,8 @@ confirmacao_logado();
                 }
                 // BOTOES
                 if ($_SESSION["ehAdmin"]){
-                    echo "<a alt='editar' href='editaPalavraCitacao.php?IdCitacao=" . $row4[ 'IdCitacao' ] . "' ><img class='ico' width = '16px' height = 16px' src = 'img/ico/editar.png'></a>";
-                    echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $IdPublicacao . "&msgDelIdCitacao=" . $row4[ 'IdCitacao' ] . "' ><img class='ico' width = '16px' height = 16px' src = 'img/ico/menos.png'></a>";
+                    echo "<a alt='editar' href='editaPalavraCitacao.php?IdCitacao=" . $row4[ 'IdCitacao' ] . "' ><img class='ico' width = '16px' height = 16px' title = 'editar' src = 'img/ico/editar.png'></a>";
+                    echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $IdPublicacao . "&msgDelIdCitacao=" . $row4[ 'IdCitacao' ] . "' ><img class='ico' width = '16px' height = 16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
                 }
                 echo "<br />";
 
@@ -139,26 +139,6 @@ confirmacao_logado();
             modal ($_GET[ 'msgDelIdCitacao' ] , $elemento , "Você confirma que quer deletar esta citação?", "commitDeleteCitacao.php?IdCitacao=", "listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $IdPublicacao );
         }
     }
-
-/*
-    if (empty(!$_GET)) {
-        // echo "Tem GET sim";
-
-        if (array_key_exists("msgDelIdCitacao",$_GET)) {
-            echo "<div id='myModal' class='modal'>";
-                echo "<div class='modal-content'>";
-                    echo "<span class='close'>&times;</span>";
-                    echo $row1[ $_GET[ 'msgDelIdCitacao' ] ];      
-                    //mostraAutor($_GET[ 'preDelIdAutor' ]);
-                    echo "<p>Você confirma que quer deletar a citação ?</p>";
-                    echo "<br />";
-                    echo "<a class='botao' href='commitDeleteCitacao.php?IdPublicacao=" . $IdPublicacao . "&IdCitacao=" . $_GET[ 'msgDelIdCitacao' ] ."'>SIM</a>";
-                    echo "<a class='botao' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=". $IdPublicacao.  "'>NÃO</a>"; 
-                echo "</div>";
-            echo "</div>";
-        }
-    }
-*/
 
     include_once("inc/i_modal.php");
     ?>

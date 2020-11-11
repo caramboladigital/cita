@@ -41,10 +41,10 @@ confirmacao_logado();
                 //echo "<p>";
                 if ($_SESSION["ehAdmin"]){
                     echo "&nbsp;";
-                    echo "<a href='editaAutor.php?IdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' src = 'img/ico/editar.png'></a>";
-                    echo "<a href='listaAutor.php?msgDelIdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' src = 'img/ico/menos.png'></a>";
+                    echo "<a href='editaAutor.php?IdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'editar' src = 'img/ico/editar.png'></a>";
+                    echo "<a href='listaAutor.php?msgDelIdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
                 }
-                echo "<a href='listaCitacoesDeUmAutor.php?IdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' src = 'img/ico/ver.png'></a>";
+                echo "<a href='listaCitacoesDeUmAutor.php?IdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'ver' src = 'img/ico/ver.png'></a>";
                 mostraAutor($row1[ 'IdAutor' ]);
                 echo " | ";
                 //echo "</p>";

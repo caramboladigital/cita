@@ -12,7 +12,7 @@ body {
 #topo {
     max-width: 960px;
     margin: 0 auto;
-    height: 90px;
+    height: 98px;
     background-color: #eee;
 }
 
@@ -191,6 +191,7 @@ td.alinharPorCima {
     text-decoration: none;
     display: inline-block;
     font-size: 13px;
+    /* box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.4); */
 }
 
 

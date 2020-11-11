@@ -95,8 +95,8 @@ confirmacao_logado();
                 while ( $row4 = mysqli_fetch_assoc( $result4 ) ) {
                     // BOTOES
                     if ($_SESSION["ehAdmin"]){
-                        echo "<a alt='editar' href='editaPalavraCitacao.php?IdCitacao=" . $row4[ 'IdCitacao' ] . "' ><img class='ico' width = '16px' height = 16px' src = 'img/ico/editar.png'></a>";
-                        echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row1[ "IdPublicacao" ] . "&msgDelIdCitacao=" . $row4[ 'IdCitacao' ] . "' ><img class='ico' width = '16px' height = 16px' src = 'img/ico/menos.png'></a>";
+                        echo "<a alt='editar' href='editaPalavraCitacao.php?IdCitacao=" . $row4[ 'IdCitacao' ] . "' ><img class='ico' width = '16px' height = 16px' title = 'editar' src = 'img/ico/editar.png'></a>";
+                        echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row1[ "IdPublicacao" ] . "&msgDelIdCitacao=" . $row4[ 'IdCitacao' ] . "' ><img class='ico' width = '16px' height = 16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
                     }
                     echo "<br />";
                     mostraCitacao( $row4[ "IdCitacao" ] );

@@ -66,10 +66,10 @@ confirmacao_logado();
                     echo "<p>";
                     if ($_SESSION["ehAdmin"]){
                         echo "&nbsp;";
-                        echo "<a href='editaAutorPublicacao.php?IdPublicacao=" . $row3[ 'IdPublicacao' ] . "' ><img class='ico' width = '16px' height = '16px' src = 'img/ico/editar.png'></a>";
-                        echo "<a href='listaAutorPublicacao.php?msgDelIdPublicacao=" . $row3[ 'IdPublicacao' ] . "' ><img class='ico' width = '16px' height = '16px' src = 'img/ico/menos.png'></a>";
+                        echo "<a href='editaAutorPublicacao.php?IdPublicacao=" . $row3[ 'IdPublicacao' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'editar' src = 'img/ico/editar.png'></a>";
+                        echo "<a href='listaAutorPublicacao.php?msgDelIdPublicacao=" . $row3[ 'IdPublicacao' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
                     }
-                    echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3[ 'IdPublicacao' ] . "' ><img class='ico' width = '16px' height = '16px' src = 'img/ico/ver.png'></a>";
+                    echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3[ 'IdPublicacao' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'ver' src = 'img/ico/ver.png'></a>";
                     while ( $row4 = mysqli_fetch_assoc( $result4 ) ) {
                         mostraAutor( $row4[ "IdAutor" ] );
                         echo ". ";
