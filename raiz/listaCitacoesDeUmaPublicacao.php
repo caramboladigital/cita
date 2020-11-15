@@ -65,8 +65,9 @@ confirmacao_logado();
                     // 3.2 Retorna os dados das publicações
                     $row3 = mysqli_fetch_assoc( $result3 );
                     mostraAutor( $row3[ "IdAutor"] );
+                    echo ". ";
                 }
-                echo ". ";
+                
                 mostraPublicacao( $row1[ "IdPublicacao" ]);
                 echo "</p><hr>";
                 // Escreve autor e publicação

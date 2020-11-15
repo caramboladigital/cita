@@ -65,8 +65,10 @@ confirmacao_logado();
                     $row3 = mysqli_fetch_assoc( $result3 );
                     
                     mostraAutor( $IdAutor );
+                    echo ". ";
+
                 }
-               echo ". ";
+               
                 mostraPublicacao( $row1[ "IdPublicacao" ]);
                 echo "</p><hr>";
                 

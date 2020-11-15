@@ -56,7 +56,8 @@ confirmacao_logado();
                 echo "<a href='listaPalavra.php?msgDelIdPalavra=" . $row1[ 'IdPalavra' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
             }
             echo "<a href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1[ 'IdPalavra' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'ver' src = 'img/ico/ver.png'></a>";
-            echo $row1[ 'PalPalavra' ] . " (" . $nString . ")</a> | ";
+            mostraPalavra ( $row1[ 'IdPalavra' ]) ;
+            echo " (" . $nString . ")</a> | ";
         }
         echo "</p>";
         mysqli_free_result( $result1 );

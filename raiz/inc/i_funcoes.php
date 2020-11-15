@@ -64,7 +64,7 @@ function mostraCitacao( $IdCitacao ) {
         die( "Query mostraCitacao falhou: ". $query );
     }
     $row = mysqli_fetch_assoc( $result );
-
+    echo "<span class='citacao'>";
     if ( $row[ "CitPg" ] ) {
         echo "<strong>Página: </strong> " . $row[ "CitPg" ] . "<br />";
     }
@@ -74,6 +74,7 @@ function mostraCitacao( $IdCitacao ) {
     }
     echo "<strong>Palavras-chave: </strong>";             
     mostraPalavrasDeCitacao ( $IdCitacao );
+    echo "</span>";
     echo "<hr>";
 }
 
@@ -107,9 +108,11 @@ function mostraAutor( $IdAutor ) {
         die( "Query mostraAutor falhou: ". $query );
     }
     $row = mysqli_fetch_assoc( $result );
-    echo "<span class='sobrenome'>" . $row[ "AutSobrenome" ] . "</span>";
+    echo "<span class='sobrenome'>" . $row[ "AutSobrenome" ].  "</span>";
     if ( $row[ "AutNome" ] ) {
         echo ", <span class='nome'>" . $row[ "AutNome" ] . "</span>";
+    } else {
+      //echo " ";
     }
 
 }
@@ -126,10 +129,10 @@ function retornaAutor( $IdAutor ) {
     }
     $row = mysqli_fetch_assoc( $result );
 
-    $autor  = $row[ "AutSobrenome" ];
+    $autor  = $row[ "AutSobrenome" ] ;
     if ( $row[ "AutNome" ] ) {
         $autor .= ", " . $row[ "AutNome" ] ;
-    }
+    } 
     return $autor;
 }
 

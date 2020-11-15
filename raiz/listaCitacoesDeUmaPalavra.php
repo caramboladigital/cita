@@ -41,9 +41,6 @@ confirmacao_logado();
 
             echo "<h1> Citações para a palavra-chave: " . $row1 [ "PalPalavra" ] . "</h1>";
 
-            //
-            // 1.0 Busca cada IdCitacao em cit_pal para esta palavra
-            //
             $query2 = "SELECT * ";
             $query2 .= "FROM cit_pal ";
             $query2 .= "WHERE IdPalavra = " . $IdPalavra;
@@ -82,9 +79,6 @@ confirmacao_logado();
                     if ( !$result4 ) {
                         die( "4. Query falhou." . $query4);
                     }
-                    //$row4 = mysqli_fetch_assoc( $result4 );
-
-                    // EVITA REPETIÇÃO DE MENÇÃO DO TÍTULO
 
                     while ( $row4 = mysqli_fetch_assoc( $result4 ) ) {
 
@@ -112,30 +106,34 @@ confirmacao_logado();
                                 // MOSTRA AUTOR
                                 //
                                 mostraAutor($row5[ "IdAutor" ]);
-                                //echo "<span class='sobrenome'>" . $row6[ "AutSobrenome" ] . "</span>, ";
-                                //echo "<span class='nome'>" . $row6[ "AutNome" ] . "</span>.";
+                                echo ". ";
                             }
-                            echo ". ";
+                                //
+                                // MOSTRA PUBLICACAO
+                                //
                             mostraPublicacao( $row4[ "IdPublicacao" ] );
-                            echo "</p>";
+                            //echo "</p>";
                             $ultPub = $row4["IdPublicacao"];
                         }
                     }
 
-                    echo "<hr>";
-                    echo "<p class='blocoCitacao'>";
-                    if ( $row3[ "CitPg" ] ) {
-                        echo "<strong>Página: </strong> " . $row3[ "CitPg" ] . "<br />";
-                    }
-                    echo "<strong>Citação:</strong> <br /><span class='citacao'>" . $row3[ "CitCitacao" ] . "</span><br />";
-                    if ( $row3[ "CitComentario" ] ) {
-                        echo "<strong>Comentário: </strong><br /><span class='comentario'>" . $row3["CitComentario"] . "</span><br />";
-                    }
-                    echo "<strong>Palavras-chave: </strong>"; 
+                    echo "</p><hr>";
+
+                    if ($_SESSION["ehAdmin"]){
+                      echo "<a alt='editar' href='editaPalavraCitacao.php?IdCitacao=" . $row2 [ "IdCitacao" ] . "' ><img class='ico' width = '16px' height = 16px' title = 'editar' src = 'img/ico/editar.png'></a>";
+                      echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3[ "IdPublicacao" ] . "&msgDelIdCitacao=" . $row2 [ "IdCitacao" ] . "' ><img class='ico' width = '16px' height = 16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
+                  }
+                  echo "<br />";
+                  //
+                  // MOSTRA CITACAO
+                  //
+                  mostraCitacao($row3 [ "IdCitacao" ]);
                     
-                    mostraPalavrasDeCitacao ( $row3[ "IdCitacao" ] );
-    
-                    echo "</p>";
+                //
+                // MOSTRA PALAVRAS
+                //
+                  mostraPalavrasDeCitacao ( $row3[ "IdCitacao" ] );
+                 // echo "</p>";
                 }
 
             }
