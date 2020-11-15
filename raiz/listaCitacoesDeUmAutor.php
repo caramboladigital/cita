@@ -51,21 +51,7 @@ confirmacao_logado();
                 // 2.2 Retorna os dados dos autores
                 while ( $row2 = mysqli_fetch_assoc( $result2 ) ) {
 
-                    // 3.1 Busca os dados do autor da publicação
-                    $query3 = "SELECT * ";
-                    $query3 .= "FROM autor ";
-                    $query3 .= "WHERE IdAutor = " . $IdAutor ;
-                    // echo "query3: " . $query3 . "<br />";
-                    mysqli_set_charset( $connection, "utf8" );
-                    $result3 = mysqli_query( $connection, $query3 );
-                    if ( !$result3 ) {
-                        die( "3. Query falhou." );
-                    }
-                    // 3.2 Retorna os dados das publicações
-                    $row3 = mysqli_fetch_assoc( $result3 );
-                    
-                    mostraAutor( $IdAutor );
-                    echo ". ";
+                 mostraAutorDePublicacao ($row1[ "IdPublicacao" ]);
 
                 }
                
@@ -109,7 +95,6 @@ confirmacao_logado();
             // 4. libera os dados retornados
             mysqli_free_result( $result1 );
             mysqli_free_result( $result2 );
-            mysqli_free_result( $result3 );
             mysqli_free_result( $result4 );
             // mysqli_free_result( $result5 );
             // mysqli_free_result( $result6 );

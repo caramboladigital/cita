@@ -117,6 +117,24 @@ function mostraAutor( $IdAutor ) {
 
 }
 
+function mostraAutorDePublicacao( $IdPublicacao ) {
+  global $connection;
+  $query1 = "SELECT IdAutor ";
+  $query1 .= "FROM aut_pub ";
+  $query1 .= "WHERE IdPublicacao = " . $IdPublicacao . " ";
+  mysqli_set_charset( $connection, "utf8" );
+  $result1 = mysqli_query( $connection, $query1 );
+
+  if ( !$result1 ) {
+      die( "Query 1: ". $query1 );
+  }
+  while ($row1 = mysqli_fetch_assoc( $result1 ) ) {
+    mostraAutor( $row1[ "IdAutor" ]);
+    echo ". ";
+  }
+}
+
+
 function retornaAutor( $IdAutor ) {
     global $connection;
     $query = "SELECT * ";
@@ -195,41 +213,6 @@ function mostraPalavrasDeCitacao ( $IdCitacao ) {
 
 
 
-function mostraAutorDePublicacao( $IdPublicacao ) {
-    global $connection;
-    $query1 = "SELECT IdAutor ";
-    $query1 .= "FROM aut_pub ";
-    $query1 .= "WHERE IdPublicacao = " . $IdPublicacao . " ";
-    mysqli_set_charset( $connection, "utf8" );
-    $result1 = mysqli_query( $connection, $query1 );
-
-    if ( !$result1 ) {
-        die( "Query 1: ". $query1 );
-    }
-    while ($row1 = mysqli_fetch_assoc( $result1 ) ) {
-        $query2 = "SELECT * ";
-        $query2 .= "FROM autor ";
-        $query2 .= "WHERE IdAutor = " . $row1 ["IdAutor" ] . " " ;
-        $query2 .= "ORDER BY IdAutor ASC";
-        mysqli_set_charset( $connection, "utf8" );
-        $result2 = mysqli_query( $connection, $query2 );
-        if ( !$result2 ) {
-            die( "Query 2: ". $query2 );
-        }
-        $row2 = mysqli_fetch_assoc( $result2 );
-        
-        $nString = implode( ",", $row2 );
-        
-        echo $nString;
-        // $nNumero = intval($nString);
-        
-        //echo "<span class='sobrenome'>" . $row2[ "AutSobrenome" ] . "</span>";
-        if ( $row2[ "AutNome" ] ) {
-         //   echo ", <span class='nome'> " . $row2[ "AutNome" ] . "</span>.";
-        }
-        echo " ";
-    }
-}
 
 function confirmaLogin() {
     if (!isset($_SESSION['IdUsuario'])) {
