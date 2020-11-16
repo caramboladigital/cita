@@ -1,4 +1,4 @@
-# citacoes
+# cita
  Projeto em PHP e MySQL que armazena citações coletadas de fontes, associando-as a palavras-chave. 
  Venho guardando citações de trechos de leituras há alguns anos e sempre que preciso escrever sobre um assunto, consuto este banco de dados. Este aplicativo foi feito para facilitar o acesso a estas citações na medida em que posso acessa-las através de palavras-chave.
 
@@ -12,3 +12,4 @@ Fiz uma função de checkup de consistência para o DB, mas que também deve pod
  2. Sistema de internacionalização, adaptando os textos em tela para várias línguas
  3. Possibilidade de obter as referências ibliográficas em outros sistemas (atualmente uso ABNT, mas seria interessante que o usuário pudesse optar por outros sistemas)
  4. Melhorrar o design responsivo... o projeto já tem alguma responsividade, mas o texto do menu, por exemplo,o fica muito pequeno quando abro no celular
+...
