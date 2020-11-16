@@ -14,4 +14,10 @@ if ( !$result3 ) {
 
 header( "Location: listaPalavra.php?alteracao=success" );
 
+
+mysqli_free_result( $result3 );
+
+
+include_once( "inc/i_desconectaDB.php" );
+
 ?>

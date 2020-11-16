@@ -38,8 +38,12 @@ foreach ($_POST['listAutor'] as $id) {
     }
 } 
 
+
+
 header( "Location: listaAutorPublicacao.php?alteracao=success" );
 
+mysqli_free_result($result1);
+mysqli_free_result($result2);
 
 include_once( "inc/i_desconectaDB.php" );
 ?>

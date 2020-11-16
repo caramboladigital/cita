@@ -1,6 +1,5 @@
 <?php
 include_once( "inc/i_session.php" );
-include_once( "inc/i_conectaDB.php" );
 include_once( "inc/i_funcoes.php" );
 confirmacao_logado(); 
 ?>
@@ -34,7 +33,4 @@ confirmacao_logado();
 
 </html>
 
-<?php
-// 5. Close connection
-include_once( "inc/i_desconectaDB.php" );
-?>
+

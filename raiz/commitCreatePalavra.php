@@ -12,10 +12,10 @@ if ( !$result3 ) {
     die( "3. Query falhou." );
     header( "Location: listaPalavra.php?alteracao=falha" );
 } else {
-    header( "Location: listaPalavra.php?alteracao=sucesso&palavra=" . $_POST[ 'PalPalavra' ] );
+    header( "Location: listaPalavra.php?palavra=" . $_POST[ 'PalPalavra' ] );
 }
 
-//mysqli_free_result( $result3 );
+mysqli_free_result( $result3 );
 
 
 // 5. Close connection

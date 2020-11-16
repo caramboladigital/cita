@@ -46,3 +46,11 @@ confirmacao_logado();
 </body>
 
 </html>
+
+<?php 
+
+mysqli_free_result( $result2 );
+
+include_once("inc/i_desconectaDB.php");
+
+?>

@@ -1,3 +1,10 @@
+/*  
+      CORES
+roxo #Ae4698
+lilás #9D98CA
+
+*/
+
 body {
     font-family: Roboto, "Trebuchet MS", Verdana, "sans-serif";
     font-size: 16px;
@@ -21,8 +28,9 @@ body {
 }
 
 #logoCitacoes {
-    width: 290px;
-    height: 89px;
+    width: 200px;
+    height: 90px;
+    margin-top: 15px;
     /* float: left; */
 }
 
@@ -178,11 +186,12 @@ td.alinharPorCima {
 
 .botao:hover {
     cursor: pointer;
+    background-color: #Ae4698;
 }
 
 .botao {
     cursor: pointer;
-    background-color: #Ae4698;
+    background-color: #9D98CA;
     border: none;
     color: white;
     padding: 10px 15px;

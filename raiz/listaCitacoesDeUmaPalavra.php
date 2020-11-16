@@ -21,10 +21,6 @@ confirmacao_logado();
         <?php
         $ultPub = "";
         $IdPalavra =  $_GET[ 'IdPalavra' ];
-
-        //
-        // 1.0 Busca cada IdCitacao em cit_pal para esta palavra
-        //
         $query1 = "SELECT * ";
         $query1 .= "FROM palavra ";
         $query1 .= "WHERE IdPalavra = " . $IdPalavra;
@@ -44,8 +40,6 @@ confirmacao_logado();
             $query2 = "SELECT * ";
             $query2 .= "FROM cit_pal ";
             $query2 .= "WHERE IdPalavra = " . $IdPalavra;
-
-            //echo "query2: " . $query2 . "<br />";
             mysqli_set_charset( $connection, "utf8" );
             $result2 = mysqli_query( $connection, $query2 );
 
@@ -58,9 +52,6 @@ confirmacao_logado();
                 $query3 = "SELECT * ";
                 $query3 .= "FROM citacao ";
                 $query3 .= "WHERE IdCitacao =" . $row2 [ "IdCitacao" ];
-
-                //echo "query3: " . $query3 . "<br />";
-
                 $result3 = mysqli_query( $connection, $query3 );
                 if ( !$result3 ) {
                     die( "3. Query falhou." . $query3);
@@ -73,7 +64,6 @@ confirmacao_logado();
                     $query4 .= "WHERE IdPublicacao = " .  $row3[ "IdPublicacao" ] . " ";
                     $query4 .= "ORDER BY PubTitulo;" ;
 
-                    //echo "query4: " . $query4 . "<br />";
                     mysqli_set_charset( $connection, "utf8" );
                     $result4 = mysqli_query( $connection, $query4 );
                     if ( !$result4 ) {
@@ -85,7 +75,6 @@ confirmacao_logado();
                         $query5 = "SELECT * ";
                         $query5 .= "FROM aut_pub ";
                         $query5 .= "WHERE IdPublicacao = " . $row4[ "IdPublicacao" ];
-                        //echo "query5: " . $query5 . "<br />";
                         $result5 = mysqli_query( $connection, $query5 );
                         if ( !$result5 ) {
                             die( "5. Query falhou." . $query5);
@@ -145,7 +134,14 @@ confirmacao_logado();
 </body>
 
 </html>
+
 <?php
-// 5. Close connection
+mysqli_free_result($result1);
+mysqli_free_result($result2);
+mysqli_free_result($result3);
+mysqli_free_result($result4);
+mysqli_free_result($result5);
+mysqli_free_result($result6);
+
 include_once( "inc/i_desconectaDB.php" );
 ?>

@@ -16,6 +16,8 @@ if ( !$result3 ) {
 
 header( "Location: listaAutor.php?updIdAutor=sucesso" );
 
+mysqli_free_result( $result3 );
+
 // 5. Close connection
 include_once( "inc/i_desconectaDB.php" );
 ?>

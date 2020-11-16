@@ -24,4 +24,5 @@ header( "Location: " . $origem );
 
 mysqli_free_result( $result1 );
 mysqli_free_result( $result3 );
+
 include_once( "inc/i_desconectaDB.php" );

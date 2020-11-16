@@ -12,7 +12,7 @@ if (!$result3) {
   die("3. Query falhou.");
 }
 
-header("Location: listaAutor.php?creIdAutor=sucesso");
+header("Location: listaAutor.php?alteracao=sucesso");
 
 mysqli_free_result($result3);
 

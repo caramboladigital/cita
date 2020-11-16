@@ -1,7 +1,7 @@
 <?php
 // Criar conexão com a DB
-include_once( "funcoes.php" );
-include_once( "inc/conectaDB.php" );
+include_once( "inc/i_funcoes.php" );
+include_once( "inc/i_conectaDB.php" );
 
 
 echo "PUBLICAÇÃO:  " . $_POST[ 'IdPublicacao' ] . "<br />"; 
