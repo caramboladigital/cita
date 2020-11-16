@@ -1,9 +1,11 @@
 # cita
  
 PHP / MySQL project that stores source collected quotations, linking them to keywords.
+
+The DB to use with this is on the DB folder
 I've been storing quotations of readings for some time and I needed a tool that could help me retrieve the quotation related to a specific subject, so I made this app. 
 
-This is my first PHP / MySQK project. I learned to plan a DB on my own and program using PHP for this project. So, this must be full of errors and I'm pretty sure there are much space for improvement. I know that there must be a better way to write the queries... they work, but I'm sure theu can be optimized.
+This is my first PHP / MySQK project. I learned to plan a DB on my own and program using PHP for this project. Of course, I'm still learning. So, this must be full of errors and I'm pretty sure there are much space for improvement. I know that there must be a better way to write the queries... they work, but I'm sure theu can be optimized.
 
 I've even made a checkup function to check the integrity of the DB, but it must be optimized as well. 
 
@@ -17,9 +19,10 @@ Nest steps:
 ______________________
 
 Projeto em PHP e MySQL que armazena citações coletadas de fontes, associando-as a palavras-chave. 
+O DB para usar com este app está na pasta DB.
 Venho guardando citações de trechos de leituras há alguns anos e sempre que preciso escrever sobre um assunto, consuto este banco de dados. Este aplicativo foi feito para facilitar o acesso a estas citações na medida em que posso acessa-las através de palavras-chave.
 
-Este é o meu primeiro projeto em PHP e MySQL. Aprendi a projetar um DB e a programar em PHP para este projeto. Sendo assim, o projeto deve ter muitas melhorias possíveis que eu nem sou capaz de ver. Sei que as queries do DB podem ser melhoradas. Elas funcionam mas certamente podem ser mais eficientes.
+Este é o meu primeiro projeto em PHP e MySQL. Aprendi a projetar um DB e a programar em PHP para este projeto. Logicamente, eu ainda estou aprendendo. Sendo assim, o projeto deve ter muitas melhorias possíveis que eu nem sou capaz de ver. Sei que as queries do DB podem ser melhoradas. Elas funcionam mas certamente podem ser mais eficientes.
 
 Fiz uma função de checkup de consistência para o DB, mas que também deve poder ser melhorada.
 
