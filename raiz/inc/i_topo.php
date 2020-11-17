@@ -37,6 +37,9 @@
     }
     ?>
     <a href="logout.php">LOGOUT</a>
+    <span style="float:left;margin-top:10px"> | </span>
+    <a href="#">ptBR</a>
+    <a href="#">enEn</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 </div>

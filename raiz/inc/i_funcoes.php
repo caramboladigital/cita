@@ -237,7 +237,7 @@ function modal($id, $elemento , $msg, $apaga, $volta) {
 
 
 
-/*
+
 function expressao($texto , $lang){
     global $connection;
     $query1 = "SELECT * ";
@@ -247,12 +247,10 @@ function expressao($texto , $lang){
     $result1 = mysqli_query( $connection, $query1 );
 
     if ( !$result1 ) {
-       // die( "Query 1: ". $query1 );
         echo $texto;
     } else {
         $row1 = mysqli_fetch_assoc( $result1 ); 
-        //echo "língua: " . $lang ;
         echo $row1 [ $lang ];
     }
 }
-*/
+
