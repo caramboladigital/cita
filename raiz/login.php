@@ -33,7 +33,7 @@ include_once( "inc/i_conectaDB.php" );
     echo "<div id='myModal' class='modal'>";
         echo "<div class='modal-content'>";
             echo "<div id='divLogin'>";
-            echo "<div id='logoCitacoes'><img src='img/logo-citacoes.png'></a></div>";
+            echo "<div id='logoCitacoes'><img src='img/logo-cita.png'></a></div>";
             echo "<div class='espaco30'></div>";
             echo "<h2>Login</h2>";
             echo $msg;

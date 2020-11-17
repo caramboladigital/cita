@@ -9,7 +9,7 @@ confirmacao_logado();
 
 <head>
     <meta charset="utf-8" />
-    <title>Busca por palavra-chave</title>
+    <title><?php xpre( "Busca por palavra-chave" ); ?></title>
     <?php include_once( "inc/i_links.php" ); ?>
 </head>
 
@@ -17,8 +17,8 @@ confirmacao_logado();
     <div id="divGeral">
         <?php include_once( "inc/i_topo.php" ); ?>
         
-        <h1>Busca por palavra-chave</h1>
-        <p>Palavra (X) | X = número de vezes que a palavra foi associada a uma citação.</p>
+        <h1><?php xpre( "Busca por palavra-chave" ); ?></h1>
+        <p><?php xpre( "Palavra (X) | X = número de vezes que a palavra foi associada a uma citação." ); ?></p>
         <p>
         <?php
             $query1 = "SELECT * ";

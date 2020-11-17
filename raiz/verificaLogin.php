@@ -1,7 +1,7 @@
 <?php
     include_once( "inc/i_session.php" );
     include_once( "inc/i_conectaDB.php" );
-    include_once( "funcoes.php" );
+    include_once( "inc/i_funcoes.php" );
 ?>
 <html>
 
@@ -28,13 +28,6 @@
         }
         $row1 = mysqli_fetch_assoc( $result1 );
         
-        /*
-        echo "usuario: " . $usuario . "<br />";
-        echo "usuarioDB: " . $row1["UsuUsuario"] . "<br />";
-        echo "hash: " . $hash . "<br />";
-        echo "hashDB: " . $row1["UsuHash"] . "<br />";
-        */
-        
         if ($row1["UsuUsuario"]){
            echo "usuario combina! <br />" ; 
             if ($hash == $row1["UsuHash"]){
@@ -44,12 +37,14 @@
                 $_SESSION["UsuUsuario"] = $row1["UsuUsuario"];
                 $_SESSION["UsuNome"] = $row1["UsuNome"];
                 $_SESSION["UsuNivel"] = $row1["UsuNivel"];
+                $_SESSION["UsuLingua"] = $row1["UsuLingua"];                
                 if ($row1["UsuNivel"] == 1) {
                   $_SESSION["ehAdmin"] = TRUE;
                 } else {
                   $_SESSION["ehAdmin"] = FALSE;
                 }
-                echo "Usuário: " . $_SESSION["UsuUsuario"];
+                echo "Usuário: " . $_SESSION["UsuUsuario"] . "<br />";
+                echo "Língua: " . $_SESSION["UsuLingua"]  . "<br />";
                 header('Location: index.php?r=loginrolou');
             } else {
                 echo "hash não combina!<br />";

@@ -238,19 +238,45 @@ function modal($id, $elemento , $msg, $apaga, $volta) {
 
 
 
-function expressao($texto , $lang){
-    global $connection;
-    $query1 = "SELECT * ";
-    $query1 .= "FROM lingua ";
-    $query1 .= "WHERE ptBR = '" . $texto . "' ";
-    mysqli_set_charset( $connection, "utf8" );
-    $result1 = mysqli_query( $connection, $query1 );
+function xpre($texto) {
+  global $connection;
 
-    if ( !$result1 ) {
-        echo $texto;
-    } else {
-        $row1 = mysqli_fetch_assoc( $result1 ); 
-        echo $row1 [ $lang ];
-    }
+  /*
+  $lang = "";
+  $query0 = "SELECT * ";
+  $query0 .= "FROM usuario ";
+  $query0 .= "WHERE IdUsuario = '" . $_SESSION["IdUsuario"]  . "'";
+  mysqli_set_charset( $connection, "utf8" );
+  $result0 = mysqli_query( $connection, $query0 );
+  $row0 = mysqli_fetch_assoc( $result0 );
+  if ( !$result0 ) {
+      //echo $texto;
+  } else {
+      //$lang = $row0 [ $lang ];
+  }
+*/
+
+//include_once( "inc/i_session.php" );
+
+  $query1 = "SELECT * ";
+  $query1 .= "FROM lingua ";
+  $query1 .= "WHERE ptBR = '" . $texto . "' ";
+  mysqli_set_charset( $connection, "utf8" );
+  $result1 = mysqli_query( $connection, $query1 );
+  //$row1 = mysqli_fetch_assoc( $result1 );
+
+  //echo  
+
+ $lang = $_SESSION["UsuLingua"];
+  
+  if ( !$result1 ) {
+      echo " deu erro na tradução! <br />";
+  } else {
+      $row1 = mysqli_fetch_assoc( $result1 ); 
+      $traducao = $row1 [ $lang ];
+
+      echo $traducao;
+  }
+  
 }
 

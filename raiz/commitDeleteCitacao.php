@@ -9,16 +9,13 @@ $IdCitacao = $_GET[ 'IdCitacao' ];
 
 // DELETA RELAÇÃO EM cit_pal
 
-//while ( $row3 = mysqli_fetch_assoc( $result3 ) ) {
 $query3a = "DELETE FROM cit_pal ";
 $query3a .= "WHERE IdCitacao = " .  $IdCitacao;
-//echo "Q3a:" .  $query3a . "<br />";
 $result3a = mysqli_query( $connection, $query3a );
 if ( !$result3a ) {
     die( "3a. Query falhou.  . $query3" );
 }
 //}
-
 // DELETA CITAÇÃO
 
 $query2 = "DELETE FROM citacao ";

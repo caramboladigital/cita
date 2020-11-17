@@ -14,21 +14,21 @@
   }
 </script>
 <div class="menu">
-  <div class="topnav" id="myTopnav">
-    <a href="index.php">BUSCA POR PALAVRA-CHAVE</a>
+  <div id="myTopnav" class="topnav" >
+    <a href="index.php"><?php xpre( "Busca por palavra-chave" ); ?></a>
     <?php
     if ($_SESSION["ehAdmin"]) {
       echo "<a href='incluiAutorPublicacao.php'>NOVA PUBLICAÇÃO</a>";
     }
     ?>
     <div class="dropdown">
-      <button class="dropbtn">LISTAS
+      <button class="dropbtn"><?php xpre( "Listas" ); ?>
         <i class="fa fa-caret-down"></i>
       </button>
       <div class="dropdown-content">
-        <a href="listaAutorPublicacao.php">LISTA PUBLICAÇÕES</a>
-        <a href="listaAutor.php">LISTA AUTORES</a>
-        <a href="listaPalavra.php">LISTA PALAVRAS-CHAVE</a>
+        <a href="listaAutorPublicacao.php"><?php xpre( "Lista publicações" ); ?></a>
+        <a href="listaAutor.php"><?php xpre( "Lista autores" ); ?></a>
+        <a href="listaPalavra.php"><?php xpre( "Lista palavras-chave" ); ?></a>
       </div>
     </div>
     <?php
@@ -38,15 +38,15 @@
     ?>
     <a href="logout.php">LOGOUT</a>
     <span style="float:left;margin-top:10px"> | </span>
-    <a href="#">ptBR</a>
-    <a href="#">enEn</a>
+    <a class="menuLang" href="#">ptBR</a>
+    <a class="menuLang" href="#">enEn</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 </div>
 
 <div id="divUsuario">
   <?php
-  echo "usuário: " . $_SESSION["UsuNome"];
+  echo xpre( "usuário" )  . ": ". $_SESSION["UsuNome"];
   ?>
 </div>
 <div class="espaco30"></div>

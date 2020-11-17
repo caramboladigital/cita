@@ -27,6 +27,18 @@ body {
     border-bottom: 1px #9D98CA solid;
 }
 
+#myTopnav a {
+    text-transform: uppercase;
+}
+
+.dropbtn {
+    text-transform: uppercase;
+}
+
+#myTopnav a.menuLang {
+    text-transform: initial;
+}
+
 #logoCitacoes {
     width: 200px;
     height: 90px;
