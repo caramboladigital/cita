@@ -43,8 +43,8 @@
                 } else {
                   $_SESSION["ehAdmin"] = FALSE;
                 }
-                echo "Usuário: " . $_SESSION["UsuUsuario"] . "<br />";
-                echo "Língua: " . $_SESSION["UsuLingua"]  . "<br />";
+                //echo "Usuário: " . $_SESSION["UsuUsuario"] . "<br />";
+                //echo "Língua: " . $_SESSION["UsuLingua"]  . "<br />";
                 header('Location: index.php?r=loginrolou');
             } else {
                 echo "hash não combina!<br />";

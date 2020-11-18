@@ -8,14 +8,14 @@ confirmacao_logado();
 
 <head>
     <meta charset="utf-8" />
-    <title>Edita palavra-chave</title>
+    <title><?php echo xpre("Edita palavra-chave"); ?></title>
     <?php include_once("inc/i_links.php"); ?>
 </head>
 
 <body>
     <div id="divGeral">
         <?php include_once("inc/i_topo.php"); ?>
-        <h1>Edita palavra-chave</h1>
+        <h1><?php echo xpre("Edita palavra-chave"); ?></h1>
         <div id="editaPalavra">
 
             <?php
@@ -39,7 +39,7 @@ confirmacao_logado();
                 echo "<input id='PalPalavra' name='PalPalavra' class='PalPalavra' size='50' value= '" . $row2["PalPalavra"] . "' >";
                 echo "<br /><br />";
                 ?>
-                <button class="botao" type="submit" name="submit">ALTERA PALAVRA-CHAVE</button>
+                <button class="botao" type="submit" name="submit"><?php echo xpre("Altera palavra-chave"); ?></button>
             </form>
 
         </div>

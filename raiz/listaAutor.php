@@ -63,8 +63,8 @@ confirmacao_logado();
     if (empty(!$_GET)) {
         // echo "Tem GET sim";
         if (array_key_exists("msgDelIdAutor",$_GET)) {
-            $elemento = "Autor: " . retornaAutor( $_GET[ 'msgDelIdAutor' ] );
-            modal ($_GET[ 'msgDelIdAutor' ] , $elemento , "Você confirma que quer deletar este autor?", "commitDeleteAutor.php?IdAutor=", "listaAutor.php");
+            $elemento =  xpre("Autor") . ": " . retornaAutor( $_GET[ 'msgDelIdAutor' ] );
+            modal ($_GET[ 'msgDelIdAutor' ] , $elemento , xpre("Você confirma que quer deletar este autor?") , "commitDeleteAutor.php?IdAutor=", "listaAutor.php");
         }
     }
     include_once("inc/i_modal.php");

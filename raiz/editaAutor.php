@@ -8,7 +8,7 @@ confirmacao_logado();
 
 <head>
   <meta charset="utf-8" />
-  <title>Edita autor</title>
+  <title><?php echo xpre("Edita autor"); ?></title>
   <?php include_once("inc/i_links.php"); ?>
 </head>
 
@@ -17,7 +17,7 @@ confirmacao_logado();
     <?php
     include_once("inc/i_topo.php");
     ?>
-    <h1>Edita autor</h1>
+    <h1><?php echo xpre("Edita autor"); ?></h1>
     <div id="editaAutor">
       <?php
       $IdAutor = $_GET['IdAutor'];
@@ -38,14 +38,14 @@ confirmacao_logado();
       ?>
       <form action="commitUpdateAutor.php" method="POST">
         <?php
-        echo "<h3>Sobrenome</h3>";
+        echo "<p>" . xpre("Sobrenome") . "</p>";
         echo "<input id='IdAutor' type= 'hidden' name='IdAutor' class='IdAutor' size='0' value= '" . $row2["IdAutor"] . "' >";
         echo "<input id='AutSobrenome' name='AutSobrenome' class='AutSobrenome' size='50' value= '" . $row2["AutSobrenome"] . "' >";
-        echo "<h3>Nome</h3>";
+        echo "<p>" . xpre("Nome") . "</p>";
         echo "<input id='AutNome' name='AutNome' class='AutNome' size='50' value= '" . $row2["AutNome"] . "' >";
         echo "<br /><br />";
         ?>
-        <button class="botao" type="submit" name="submit">ALTERA AUTOR</button>
+        <button class="botao" type="submit" name="submit"><?php echo xpre("Altera autor"); ?></button>
       </form>
 
     </div>

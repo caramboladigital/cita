@@ -27,8 +27,8 @@ function mostraPublicacao( $IdPublicacao ) {
         }
     }
     if ( $row[ "PubUrl" ] ) {
-        echo "Disponível em &#8249;<span class='url'>" . $row[ "PubUrl" ] . "</span>&#8250;. ";
-        echo "Acessado em <span class='dataDeAcesso'>" . $row[ "PubDataDeAcesso" ] . "</span>.";
+        echo xpre("Disponível em") . " &#8249;<span class='url'>" . $row[ "PubUrl" ] . "</span>&#8250;. ";
+        echo xpre("Acessado em") .  " <span class='dataDeAcesso'>" . $row[ "PubDataDeAcesso" ] . "</span>.";
     }
 }
 
@@ -66,13 +66,13 @@ function mostraCitacao( $IdCitacao ) {
     $row = mysqli_fetch_assoc( $result );
     echo "<span class='citacao'>";
     if ( $row[ "CitPg" ] ) {
-        echo "<strong>Página: </strong> " . $row[ "CitPg" ] . "<br />";
+        echo "<strong>" . xpre("Página") . ": </strong> " . $row[ "CitPg" ] . "<br />";
     }
-    echo "<strong>Citação:</strong> <br /><span class='citacao'>" . $row[ "CitCitacao" ] . "</span><br />";
+    echo "<strong>" . xpre("Citação") . ": </strong> <br /><span class='citacao'>" . $row[ "CitCitacao" ] . "</span><br />";
     if ( $row[ "CitComentario" ] ) {
-        echo "<strong>Comentário: </strong><br /><span class='comentario'>" . $row["CitComentario"] . "</span><br />";
+        echo "<strong>" . xpre("Comentário") . ": </strong><br /><span class='comentario'>" . $row["CitComentario"] . "</span><br />";
     }
-    echo "<strong>Palavras-chave: </strong>";             
+    echo "<strong>" . xpre("Palavras-chave") . ": </strong>";             
     mostraPalavrasDeCitacao ( $IdCitacao );
     echo "</span>";
     //echo "<hr>";

@@ -70,8 +70,8 @@ confirmacao_logado();
     if (empty(!$_GET)) {
         // echo "Tem GET sim";
         if (array_key_exists("msgDelIdPalavra",$_GET)) {
-            $elemento = "Palavra: " . retornaPalavra( $_GET[ 'msgDelIdPalavra' ] );
-            modal ($_GET[ 'msgDelIdPalavra' ] , $elemento , "Você confirma que quer deletar esta palavra-chave?", "commitDeletePalavra.php?IdPalavra=", "listaPalavra.php");
+            $elemento =  xpre("Palavra-chave") . ": " . retornaPalavra( $_GET[ 'msgDelIdPalavra' ] );
+            modal ($_GET[ 'msgDelIdPalavra' ] , $elemento , xpre("Você confirma que quer deletar esta palavra-chave?") , "commitDeletePalavra.php?IdPalavra=", "listaPalavra.php");
         }
     }
     include_once("inc/i_modal.php");
