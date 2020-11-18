@@ -1,5 +1,5 @@
 
-<h3>Lista autores sem publicação</h3>
+<h3><?php echo xpre("Lista autores sem publicação"); ?></h3>
 <?php
 $query1 = "SELECT * ";
 $query1 .= "FROM autor ";
@@ -25,12 +25,12 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
 
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
-        echo "Autor <strong>";
+        echo xpre("Autor") . " <strong>";
         mostraAutor($row1[ "IdAutor" ]);
         //. $row1[ "AutSobrenome" ] . ", " .  $row1[ "AutNome" ] .  
-        echo "</strong> não tem nenhuma obra! <br />";
+        echo "</strong> " . xpre("não tem nenhuma publicação!") . "<br />";
         //echo "<a class='botao' href='deletaAutor.php?IdAutor=". $row1[ "IdAutor" ] . "'>DELETA AUTOR</a>";
-        echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdAutor=" . $row1[ "IdAutor" ] . "'>DELETA AUTOR</a>";
+        echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdAutor=" . $row1[ "IdAutor" ] . "'>" . xpre("Deleta autor") . "</a>";
         echo "<hr>";
     }
 }

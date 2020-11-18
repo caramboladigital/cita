@@ -1,4 +1,4 @@
-<h3>Lista palavras-chave sem citação</h3>
+<h3><?php echo xpre("Lista palavras-chave sem citação"); ?></h3>
 <?php
 $query1 = "SELECT * ";
 $query1 .= "FROM palavra ";
@@ -26,8 +26,8 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
         //. $row1[ "AutSobrenome" ] . ", " .  $row1[ "AutNome" ] .  
-      echo "Palavra-chave: <strong>" . $row1[ "PalPalavra" ] .  "</strong> não está vinculada a nenhuma citação! <br />";
-      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdPalavra=" . $row1[ "IdPalavra" ] . "'>DELETA PALAVRA-CHAVE</a>";
+      echo xpre("Palavra-chave") . ": <strong>" . $row1[ "PalPalavra" ] .  "</strong> ".  xpre("não está vinculada a nenhuma citação!") ."<br />";
+      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdPalavra=" . $row1[ "IdPalavra" ] . "'>". xpre("Deleta palavra-chave"). "</a>";
       echo "<hr>";
     }
 }

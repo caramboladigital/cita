@@ -75,7 +75,7 @@ function mostraCitacao( $IdCitacao ) {
     echo "<strong>Palavras-chave: </strong>";             
     mostraPalavrasDeCitacao ( $IdCitacao );
     echo "</span>";
-    echo "<hr>";
+    //echo "<hr>";
 }
 
 function retornaCitacao( $IdCitacao ) {
@@ -229,8 +229,8 @@ function modal($id, $elemento , $msg, $apaga, $volta) {
             echo "<p><strong>" . $elemento . "</strong></p>";
             echo "<p>" . $msg . "</p>";
             echo "<br />";
-            echo "<a class='botao' href='" . $apaga . $id . "&origem=" . $volta . "'>SIM</a>";
-            echo "<a class='botao' href='" . $volta .       "'>NÃO</a>";
+            echo "<a class='botao' href='" . $apaga . $id . "&origem=" . $volta . "'>" . xpre("Sim") . "</a>";
+            echo "<a class='botao' href='" . $volta .       "'>" . xpre("Não") . "</a>";
         echo "</div>";
     echo "</div>";
 }
@@ -240,23 +240,6 @@ function modal($id, $elemento , $msg, $apaga, $volta) {
 
 function xpre($texto) {
   global $connection;
-
-  /*
-  $lang = "";
-  $query0 = "SELECT * ";
-  $query0 .= "FROM usuario ";
-  $query0 .= "WHERE IdUsuario = '" . $_SESSION["IdUsuario"]  . "'";
-  mysqli_set_charset( $connection, "utf8" );
-  $result0 = mysqli_query( $connection, $query0 );
-  $row0 = mysqli_fetch_assoc( $result0 );
-  if ( !$result0 ) {
-      //echo $texto;
-  } else {
-      //$lang = $row0 [ $lang ];
-  }
-*/
-
-//include_once( "inc/i_session.php" );
 
   $query1 = "SELECT * ";
   $query1 .= "FROM lingua ";
@@ -275,7 +258,7 @@ function xpre($texto) {
       $row1 = mysqli_fetch_assoc( $result1 ); 
       $traducao = $row1 [ $lang ];
 
-      echo $traducao;
+      return $traducao;
   }
   
 }

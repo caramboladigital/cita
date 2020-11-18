@@ -8,17 +8,17 @@ confirmacao_logado();
 
 <head>
     <meta charset="utf-8" />
-    <title>Publicações</title>
+    <title><?php echo xpre("Publicações"); ?></title>
     <?php include_once( "inc/i_links.php" ); ?>
 </head>
 <body>
     <div id="divGeral">
         <?php include_once( "inc/i_topo.php" );
             if ($_SESSION["ehAdmin"]){
-                echo "<a class='botao' href='incluiAutorPublicacao.php'>CADASTRA NOVA PUBLICAÇÃO</a>";
+                echo "<a class='botao' href='incluiAutorPublicacao.php'>" . xpre("Cadastra nova publicação") ."</a>";
             }
         ?>
-        <h1>Lista de publicações</h1>
+        <h1><?php echo xpre("Lista de publicações"); ?></h1>
         <div id="listaPub">
             <?php
             $query1 = "SELECT * ";

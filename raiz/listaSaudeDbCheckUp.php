@@ -15,7 +15,7 @@ confirmacao_logado();
 <body>
     <div id="divGeral">
         <?php include_once("inc/i_topo.php"); ?>
-        <h1>Check-up do Banco de Dados</h1>
+        <h1><?php echo xpre("Check-up do Banco de Dados"); ?></h1>
         <div class="indent">
             <?php
             include_once("inc/i_listaSaudeDbAutorSemPublicacao.php");
@@ -35,23 +35,23 @@ confirmacao_logado();
      if (empty(!$_GET)) {
         // echo "Tem GET sim";
         if (array_key_exists("msgDelIdAutor",$_GET)) {
-            $elemento = "Autor: " . retornaAutor( $_GET[ 'msgDelIdAutor' ] );
-            modal ($_GET[ 'msgDelIdAutor' ] , $elemento , "Você confirma que quer deletar este autor?", "commitDeleteAutor.php?IdAutor=", "listaSaudeDbCheckUp.php");
+            $elemento = xpre("Autor") . ": " . retornaAutor( $_GET[ 'msgDelIdAutor' ] );
+            modal ($_GET[ 'msgDelIdAutor' ] , $elemento ,  xpre("Você confirma que quer deletar este autor?") , "commitDeleteAutor.php?IdAutor=", "listaSaudeDbCheckUp.php");
         }
 
         if (array_key_exists("msgDelIdPublicacao",$_GET)) {
-            $elemento = "Publicação: " . retornaPublicacao( $_GET[ 'msgDelIdPublicacao' ] );
-            modal ($_GET[ 'msgDelIdPublicacao' ] , $elemento , "Você confirma que quer deletar esta publicação?", "commitDeletePublicacao.php?IdPublicacao=", "listaSaudeDbCheckUp.php");
+            $elemento = xpre("Publicação") . ": " . retornaPublicacao( $_GET[ 'msgDelIdPublicacao' ] );
+            modal ($_GET[ 'msgDelIdPublicacao' ] , $elemento ,  xpre("Você confirma que quer deletar esta publicação?") , "commitDeletePublicacao.php?IdPublicacao=", "listaSaudeDbCheckUp.php");
         }
 
         if (array_key_exists("msgDelIdCitacao",$_GET)) {
-            $elemento = "Citação: " . retornaCitacao( $_GET[ 'msgDelIdCitacao' ] );
-            modal ($_GET[ 'msgDelIdCitacao' ] , $elemento , "Você confirma que quer deletar esta citação?", "commitDeleteCitacao.php?IdCitacao=", "listaSaudeDbCheckUp.php");
+            $elemento = xpre("Citação") . ": " . retornaCitacao( $_GET[ 'msgDelIdCitacao' ] );
+            modal ($_GET[ 'msgDelIdCitacao' ] , $elemento ,  xpre("Você confirma que quer deletar esta citação?") , "commitDeleteCitacao.php?IdCitacao=", "listaSaudeDbCheckUp.php");
         }
 
         if (array_key_exists("msgDelIdPalavra",$_GET)) {
-            $elemento = "Palavra: " . retornaPalavra( $_GET[ 'msgDelIdPalavra' ] );
-            modal ($_GET[ 'msgDelIdPalavra' ] , $elemento , "Você confirma que quer deletar esta palavra-chave?", "commitDeletePalavra.php?IdPalavra=", "listaSaudeDbCheckUp.php");
+            $elemento = xpre("Palavra-chave") . ": " . retornaPalavra( $_GET[ 'msgDelIdPalavra' ] );
+            modal ($_GET[ 'msgDelIdPalavra' ] , $elemento ,  xpre("Você confirma que quer deletar esta palavra-chave?") , "commitDeletePalavra.php?IdPalavra=", "listaSaudeDbCheckUp.php");
         }
 
 

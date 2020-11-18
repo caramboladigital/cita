@@ -1,4 +1,4 @@
-<h3>Lista citações sem palavra-chave</h3>
+<h3><?php echo xpre("Lista citações sem palavra-chave"); ?></h3>
 <?php
 $query1 = "SELECT * ";
 $query1 .= "FROM citacao ";
@@ -26,8 +26,8 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
         //. $row1[ "AutSobrenome" ] . ", " .  $row1[ "AutNome" ] .  
-      echo "Citação: <br /><strong>" . substr( $row1[ "CitCitacao" ], 0, 70) . "... " . "</strong><br /> não tem relação com nenhuma publicação! <br />";
-      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdCitacao=" . $row1[ "IdCitacao" ] . "'>DELETA CITAÇÃO</a>";
+      echo xpre("Citação") . ": <br /><strong>" . substr( $row1[ "CitCitacao" ], 0, 70) . "... " . "</strong><br /> " . xpre("não tem nenhuma palavra-chave!") .  "<br />";
+      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdCitacao=" . $row1[ "IdCitacao" ] . "'>" . xpre("Deleta citação") . "</a>";
       echo "<hr>";
     }
 }

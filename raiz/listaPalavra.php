@@ -8,7 +8,7 @@ confirmacao_logado();
 
 <head>
     <meta charset="utf-8" />
-    <title>Palavras-chave</title>
+    <title><?php echo xpre("Palavras-chave"); ?></title>
     <?php include_once( "inc/i_links.php" ); ?>
 </head>
 
@@ -16,10 +16,10 @@ confirmacao_logado();
     <div id="divGeral">
         <?php include_once( "inc/i_topo.php" ); 
             if ($_SESSION["ehAdmin"]){
-                echo "<a class='botao' href='incluiPalavra.php'>CADASTRA NOVA PALAVRA-CHAVE</a>";
+                echo "<a class='botao' href='incluiPalavra.php'>" . xpre("Cadastra nova palavra-chave") . "</a>";
             }
         ?>
-        <h1>Lista de palavras-chave</h1>
+        <h1><?php echo xpre("Lista de palavras-chave"); ?></h1>
         <?php
         $i = 0; // i = contador
         $query1 = "SELECT * ";

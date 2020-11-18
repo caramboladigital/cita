@@ -1,4 +1,4 @@
-<h3>Lista citações sem publicação</h3>
+<h3><?php echo xpre("Lista citações sem publicação"); ?></h3>
 <?php
 $queryCSPu1 = "SELECT * ";
 $queryCSPu1 .= "FROM citacao ";
@@ -13,8 +13,8 @@ while ( $rowCSPu1 = mysqli_fetch_assoc( $resultCSPu1 ) ) {
     //echo $nString . "<br />";
 
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
-      echo "Citação: <br /><strong>" . $rowCSPu1[ "CitCitacao" ] .  "</strong><br /> não tem relação com nenhuma publicação! <br />";
-      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdCitacao=" . $rowCSPu1[ "IdCitacao" ] . "'>DELETA CITAÇÃO</a>";
+      echo xpre("Citação").": <br /><strong>" . $rowCSPu1[ "CitCitacao" ] .  "</strong><br />".  xpre("não tem nenhuma publicação!") .  "<br />";
+      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdCitacao=" . $rowCSPu1[ "IdCitacao" ] . "'>". xpre("Deleta citação") . "</a>";
       echo "<hr>";
 }
 //mysqli_free_result( $resultCSPu1 );

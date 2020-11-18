@@ -121,7 +121,7 @@ confirmacao_logado();
                 //
                 // MOSTRA PALAVRAS
                 //
-                  mostraPalavrasDeCitacao ( $row3[ "IdCitacao" ] );
+                  //mostraPalavrasDeCitacao ( $row3[ "IdCitacao" ] );
                  // echo "</p>";
                 }
 

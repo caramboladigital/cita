@@ -1,4 +1,4 @@
-<h3>Lista publicações sem citação</h3>
+<h3><?php echo xpre("Lista publicações sem citação"); ?></h3>
 <?php
 $query1 = "SELECT * ";
 $query1 .= "FROM publicacao ";
@@ -24,8 +24,8 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
 
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
-      echo "Publicação <strong>" . $row1[ "PubTitulo" ] .  "</strong> não tem nenhuma citação! <br />";
-      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdPublicacao=" . $row1[ "IdPublicacao" ] . "'>DELETA PUBLICAÇÃO</a>";
+      echo xpre("Publicação") . ": <strong>" . $row1[ "PubTitulo" ] .  "</strong>".  xpre("não está vinculada a nenhuma citação!") .  "<br />";
+      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdPublicacao=" . $row1[ "IdPublicacao" ] . "'>". xpre("Deleta publicação") . "</a>";
       echo "<hr>";
     }
 }
