@@ -8,16 +8,14 @@ confirmacao_logado();
 <html>
 
 <head>
-  <title>Citações por publicação</title>
+  <title><?php echo xpre("Lista citações de uma palavra-chave"); ?></title>
   <?php include_once("inc/i_links.php"); ?>
 </head>
 
 <body>
   <div id="divGeral">
-    <?php
-    include_once("inc/i_topo.php");
-    ?>
-    <div class="espaco30"></div>
+    <?php include_once("inc/i_topo.php"); ?>
+
     <?php
     $ultPub = "";
     $IdPalavra =  $_GET['IdPalavra'];
@@ -35,7 +33,7 @@ confirmacao_logado();
 
     while ($row1 = mysqli_fetch_assoc($result1)) {
 
-      echo "<h1> Citações para a palavra-chave: " . $row1["PalPalavra"] . "</h1>";
+      echo "<h1>".  xpre("Palavra-chave"). ": " . $row1["PalPalavra"] . "</h1>";
 
       $query2 = "SELECT * ";
       $query2 .= "FROM cit_pal ";
