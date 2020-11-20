@@ -12,7 +12,7 @@ I've even made a checkup function to check the integrity of the DB, but it must 
 Sugestions and cotributions are welcome
 Nest steps:
 1. Sig-up sistem... There are users and user control, but I have created them directly on the DB. 
-2. Internationalization sistema, adapting the expressions on screen to other languages
+2. Interenationalization. It is ready in Brazilian Portuguese, British English and Spanish. It would be great if there were some other languages.
 3. Possibility to change the bibliographical reference to other sistems. Now it works on ABNT, a Brazilian bibliographical reference system, but I think ti should be easy to use the system in other sistems like APA, Chicago, MLA etc
 4. Improve the responsive design... it has already some responsiveness, but the texto becemos small when viewed in a smartphone. 
 
@@ -29,7 +29,7 @@ Fiz uma função de checkup de consistência para o DB, mas que também deve pod
 Sugestões e contribuições são bem-vindas
 Próximos passos:
 1. Implementação de um sistema de sign-up... já existem usuário e tela de login, mas não fiz o sign-up. Cadastrei os usuários direto no DB
-2. Sistema de internacionalização, adaptando os textos em tela para várias línguas
+2. Internacionalização. Está funcionando em português brasileiro, em inglês britânico e espanhol. Seria legal se outras línguas também fossem colocadas.
 3. Possibilidade de obter as referências bibliográficas em outros sistemas (atualmente uso ABNT, mas seria interessante que o usuário pudesse optar por outros sistemas)
 4. Melhorrar o design responsivo... o projeto já tem alguma responsividade, mas o texto do menu, por exemplo,o fica muito pequeno quando abro no celular
 ...
