@@ -14,9 +14,9 @@ confirmacao_logado();
 <body>
     <div id="divGeral">
         <?php include_once( "inc/i_topo.php" ); 
-        if ($_SESSION["ehAdmin"]){
+/*         if ($_SESSION["ehAdmin"]){
             echo "<a class='botao' href='incluiAutor.php'>" . xpre("Cadastra novo autor") . "</a>";
-        }
+        } */
         ?>
         <h1><?php echo xpre("Lista de autores"); ?></h1>
         <p>

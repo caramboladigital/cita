@@ -8,14 +8,13 @@ confirmacao_logado();
 <html>
 
 <head>
-  <title><?php echo xpre("Lista citações de uma palavra-chave"); ?></title>
+  <title><?php echo xpre("Lista citações associadas a uma palavra-chave"); ?></title>
   <?php include_once("inc/i_links.php"); ?>
 </head>
 
 <body>
   <div id="divGeral">
     <?php include_once("inc/i_topo.php"); ?>
-
     <?php
     $ultPub = "";
     $IdPalavra =  $_GET['IdPalavra'];

@@ -9,7 +9,7 @@ confirmacao_logado();
 
 <head>
     <meta charset="utf-8" />
-    <title>Edita citação</title>
+    <title><?php echo xpre("Edita citação"); ?></title>
     <?php include_once( "inc/i_links.php" ); ?>
 </head>
 
@@ -21,8 +21,8 @@ confirmacao_logado();
         <form action="commitUpdatePalavraCitacao.php" method="POST">
             <div id="divPalavra">
                 <div class="espaco30"></div>
-                <a class="botao" href="incluiPalavra.php">CADASTRA NOVA PALAVRA-CHAVE</a>
-                <h2>Lista de palavras-chave</h2>
+                <a class="botao" href="incluiPalavra.php"><?php echo xpre("Cadastra nova palavra-chave"); ?></a>
+                <h2><?php echo xpre("Edita citação"); ?></h2>
                 <?php
 
                 $query1 = "SELECT * ";
@@ -74,13 +74,13 @@ confirmacao_logado();
                 ?>
 
                 <input id="IdCitacao" type="hidden" name="IdCitacao" class="IdCitacao" size="0" value="<?php echo $row4[ 'IdCitacao' ] ?>">
-                <p>Página: </p>
+                <p><?php echo xpre("Página"); ?></p>
                 <input id="CitPg" name="CitPg" class="CitPg" size="8" value="<?php echo $row4[ 'CitPg' ] ?>">
-                <p>Citação: </p>
+                <p><?php echo xpre("Citação"); ?></p>
                 <textarea rows="10" cols="80" id="CitCitacao" name="CitCitacao" class="CitCitacao"><?php echo $row4[ 'CitCitacao' ] ?></textarea>
-                <p>Comentário: </p>
+                <p><?php echo xpre("Comentário"); ?></p>
                 <textarea rows="10" cols="80" id="CitComentario" name="CitComentario" class="CitComentario" size="50"><?php echo $row4[ 'CitComentario' ] ?></textarea>
-                <button class="botao" type="submit" name="submit">ALTERA CITAÇÃO</button>
+                <button class="botao" type="submit" name="submit"><?php echo xpre("Altera citação"); ?></button>
             </div>
         </form>
     </div>

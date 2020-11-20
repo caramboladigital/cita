@@ -37,6 +37,7 @@ body {
 
 #myTopnav a.menuLang {
     text-transform: initial;
+    font-size: 9px;
 }
 
 #logoCitacoes {

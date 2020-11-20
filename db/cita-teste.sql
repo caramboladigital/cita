@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17/11/2020 às 18:14
+-- Tempo de geração: 20/11/2020 às 02:13
 -- Versão do servidor: 10.4.14-MariaDB
 -- Versão do PHP: 7.2.33
 
@@ -1874,6 +1874,7 @@ INSERT INTO `cit_pal` (`IdPalavra`, `IdCitacao`) VALUES
 (241, 518),
 (241, 522),
 (242, 524),
+(242, 788),
 (243, 528),
 (244, 529),
 (244, 530),
@@ -1975,17 +1976,76 @@ CREATE TABLE `lingua` (
 --
 
 INSERT INTO `lingua` (`IdLingua`, `ptBR`, `enGB`, `esES`) VALUES
-(1, 'Busca por palavra-chave', 'Search by keyword', ' '),
-(2, 'Palavra (X) | X = número de vezes que a palavra foi associada a uma citação.', 'Word (x) | X = number of times that a keyword is associated with a quotation.', ' '),
-(3, 'usuário', 'user', ' '),
-(4, 'Listas', 'Lists', ''),
-(5, 'Lista publicações', 'Publication list', ''),
-(6, 'Lista autores', 'Authors list', ''),
-(7, 'Lista palavras-chave', 'Keyword list', ''),
+(1, 'Busca por palavra-chave', 'Search by keyword', ' Buscar por palabra clave'),
+(2, 'Palavra (X) | X = número de vezes que a palavra foi associada a uma citação.', 'Word (X) | X = number of times that a keyword is associated with a quotation.', ' Palabra (X) | X = número de veces que una palabra clave se asocia con una cita.'),
+(3, 'usuário', 'user', ' usuario'),
+(4, 'Listas', 'Lists', 'Listas'),
+(5, 'Lista publicações', 'Publication list', 'Lista de publicaciones'),
+(6, 'Lista autores', 'Authors list', 'Lista de autores'),
+(7, 'Lista palavras-chave', 'Keyword list', 'Lista de palabras clave'),
 (8, 'Nova publicação', 'New publication', 'Nueva publicación'),
 (9, 'Palavras-chave', 'Keywords', 'Palabras clave'),
 (10, 'Cadastra nova palavra-chave', 'Register new keyword', 'Registrar nueva palabra clave'),
-(11, 'Lista de palavras-chave', 'Keyword list', 'Lista de palabras clave');
+(11, 'Lista de palavras-chave', 'Keyword list', 'Lista de palabras clave'),
+(12, 'Autores', 'Authors', 'Autores'),
+(13, 'Cadastra novo autor', 'Register new author', 'Registrar nuevo autor'),
+(14, 'Lista de autores', 'Authors list', 'Lista de autores'),
+(15, 'Publicações', 'Publications', 'Publicaciones'),
+(16, 'Lista de publicações', 'Publications list', 'Lista de publicaciones'),
+(17, 'Cadastra nova publicação', 'Register new publication', 'Registrar nueva publicación'),
+(18, 'Cadastra autor', 'Register author', 'Registrar autor'),
+(19, 'Sobrenome', 'Last name', 'Apellido'),
+(20, 'Nome', 'Name', 'Nombre'),
+(21, 'Cadastra publicação', 'Register publication', 'Registrar publicación'),
+(22, 'Selecione o(s) autor(es)', 'Select the author(s)', 'Seleccione el (los) autor (es)'),
+(23, 'Título', 'Title', 'Título'),
+(24, 'Local', 'Place', 'Sitio'),
+(25, 'Editora', 'Publisher', 'Editora'),
+(26, 'Ano', 'Year', 'Año'),
+(27, 'URL', 'URL', 'URL'),
+(28, 'Data de acesso', 'Access date', 'Fecha de acceso'),
+(29, 'Artigo', 'Article', 'Artículo'),
+(30, 'Check-up do Banco de Dados', 'Database Checkup', 'Verificación de la base de datos'),
+(31, 'Você confirma que quer deletar este autor?', 'Are you sure you want to delete this author?', '¿Está seguro de que desea eliminar este autor?'),
+(32, 'Você confirma que quer deletar esta publicação?', 'Are you sure you want to delete this publication?', '¿Está seguro de que desea eliminar esta publicación?'),
+(33, 'Você confirma que quer deletar esta citação?', 'Are you sure you want to delete this quotation?', '¿Está seguro de que desea eliminar esta cita?'),
+(34, 'Você confirma que quer deletar esta palavra-chave?', 'Are you sure you want to delete this keyword?', '¿Está seguro de que desea eliminar esta palabra clave?'),
+(35, 'Sim', 'Yes', 'Si'),
+(36, 'Não', 'No', 'No'),
+(37, 'Autor', 'Author', 'Autor'),
+(38, 'não tem nenhuma publicação!', 'is not attached to any publication!', 'no se adjunta a ninguna publicación!'),
+(39, 'Deleta autor', 'Delete author', 'Eliminar autor'),
+(40, 'Lista autores sem publicação', 'List of authors with no publications', 'Lista de autores sin publicaciones'),
+(41, 'Citação', 'Quotation', 'Cita'),
+(42, 'Deleta citação', 'Delete quotation', 'Eliminar cita'),
+(43, 'Lista citações sem palavra-chave', 'List of quotations with no keyword', 'Lista de citas sin palabra clave'),
+(44, 'Lista citações sem publicação', 'List of quotations with no publication', 'Lista de citas sin publicación'),
+(45, 'não tem nenhuma palavra-chave!', 'is not attached to any keyword!', 'no se adjunta a ninguna palavra clave!'),
+(46, 'Lista palavras-chave sem citação', 'List of keywords with no quotations', 'Lista de palabras clave sin citas'),
+(47, 'Palavra-chave', 'Keyword', 'Palavra clave'),
+(48, 'não está vinculada a nenhuma citação!', 'is not attached to any quotation!', 'no se adjunta a ninguna cita!'),
+(49, 'Deleta palavra-chave', 'Delete keyword', 'Eliminar palabra clave'),
+(50, 'Deleta publicação', 'Delete publication', 'Eliminar publicación'),
+(51, 'Lista publicações sem autor', 'List of publications with no author', 'Lista de publicaciones sin autor'),
+(52, 'não está vinculada a nenhum autor!', 'is not attached to any author!', 'no está vinculado a ningún autor!'),
+(53, 'Publicação', 'Publication', 'Publicación'),
+(54, 'Lista publicações sem citação', 'List of publications with no quotations', 'Lista de publicaciones sin citas'),
+(55, 'Edita autor', 'Edit author', 'Edita autor'),
+(56, 'Edita publicação', 'Edit publication', 'Edita publicación'),
+(57, 'Edita palavra-chave', 'Edit keyword', 'Edita palabra clave'),
+(58, 'Altera palavra-chave', 'Change keyword', 'Cambia palabra clave'),
+(59, 'Altera publicação', 'Change publication', 'Cambia publicación'),
+(60, 'Altera autor', 'Change author', 'Cambia autor'),
+(61, 'Lista citações de um autor', 'List of quotations of an author', 'Lista de citas de un autor'),
+(62, 'Citações', 'Quotations', 'Citas'),
+(63, 'Disponível em', 'Available at', 'Disponible en'),
+(64, 'Acessado em', 'Accessed in', 'Accedido en'),
+(65, 'Página', 'Page', 'Página'),
+(66, 'Lista citações de uma publicação', 'List of quotations of a publication', 'Lista de citas de una publicación'),
+(67, 'Lista citações associadas a uma palavra-chave', 'List of quotations related to a keyword', 'Lista de citas de una palabra clave'),
+(69, 'Edita citação', 'Edit quotation', 'Edita cita'),
+(70, 'Comentário', 'Comment', 'Comentario'),
+(71, 'Altera citação', 'Change quotation', 'Cambia cita');
 
 -- --------------------------------------------------------
 
@@ -2357,7 +2417,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`IdUsuario`, `UsuUsuario`, `UsuNome`, `UsuHash`, `UsuNivel`, `UsuLingua`) VALUES
 (2, 'convidado', 'convidado', '0f8e33f7f35da31bcaab5697ccb252243b267632843fdd2d428b11b8d8232aa5', 3, 'ptBR'),
-(3, 'admin', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 1, 'enGB');
+(3, 'admin', 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 1, 'esES');
 
 --
 -- Índices de tabelas apagadas
@@ -2424,31 +2484,31 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `autor`
 --
 ALTER TABLE `autor`
-  MODIFY `IdAutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=191;
+  MODIFY `IdAutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=192;
 
 --
 -- AUTO_INCREMENT de tabela `citacao`
 --
 ALTER TABLE `citacao`
-  MODIFY `IdCitacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=789;
+  MODIFY `IdCitacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=790;
 
 --
 -- AUTO_INCREMENT de tabela `lingua`
 --
 ALTER TABLE `lingua`
-  MODIFY `IdLingua` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `IdLingua` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT de tabela `palavra`
 --
 ALTER TABLE `palavra`
-  MODIFY `IdPalavra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=277;
+  MODIFY `IdPalavra` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=278;
 
 --
 -- AUTO_INCREMENT de tabela `publicacao`
 --
 ALTER TABLE `publicacao`
-  MODIFY `IdPublicacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=170;
+  MODIFY `IdPublicacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=171;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`

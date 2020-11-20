@@ -40,7 +40,8 @@
     <a href="logout.php">LOGOUT</a>
     <span style="float:left;margin-top:10px"> | </span>
     <a class="menuLang" href="mudaLingua.php?UsuLingua=ptBR">ptBR</a>
-    <a class="menuLang" href="mudaLingua.php?UsuLingua=enGB">enEn</a>
+    <a class="menuLang" href="mudaLingua.php?UsuLingua=enGB">enGB</a>
+    <a class="menuLang" href="mudaLingua.php?UsuLingua=esES">esES</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 </div>

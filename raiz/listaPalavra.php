@@ -15,9 +15,9 @@ confirmacao_logado();
 <body>
     <div id="divGeral">
         <?php include_once( "inc/i_topo.php" ); 
-            if ($_SESSION["ehAdmin"]){
+/*             if ($_SESSION["ehAdmin"]){
                 echo "<a class='botao' href='incluiPalavra.php'>" . xpre("Cadastra nova palavra-chave") . "</a>";
-            }
+            } */
         ?>
         <h1><?php echo xpre("Lista de palavras-chave"); ?></h1>
         <?php
