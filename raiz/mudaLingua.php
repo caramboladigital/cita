@@ -7,47 +7,48 @@ confirmacao_logado();
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>Opção de língua</title>
-    <?php include_once("inc/i_links.php"); ?>
+  <meta charset="utf-8" />
+  <title>Opção de língua</title>
+  <?php include_once("inc/i_links.php"); ?>
 </head>
 
 <body>
-    <div id="divGeral">
-        <?php include_once("inc/i_topo.php"); ?>
-        <h1>Opção de língua</h1>
-        <div id="editaPalavra">
+  <div id="divGeral">
+    <?php include_once("inc/i_topo.php"); ?>
+    <h1>Opção de língua</h1>
+    <div id="editaPalavra">
 
-            <?php
+      <?php
 
-            $UsuLingua = $_GET['UsuLingua'];
-            echo "lingua: " .  $UsuLingua;
-            
-            $query1 = "UPDATE usuario ";
-            $query1 .= "SET UsuLingua = '".   $UsuLingua . "' ";
-            $query1 .= "WHERE IdUsuario = ". $_SESSION["IdUsuario"] ;
-            mysqli_set_charset($connection, "utf8");
-            $result1 = mysqli_query($connection, $query1);
-            if (!$result1) {
-                die("1. Query falhou.");
-            }
-            $_SESSION["UsuLingua"] = $UsuLingua;  
-            
-            //$row1 = mysqli_fetch_assoc($result1);
+      $UsuLingua = $_GET['UsuLingua'];
+      //echo "lingua: " .  $UsuLingua;
+      // ATUALIZA DB COM LINGUA PREFERENCIAL DO USUARIO
+      $query1 = "UPDATE usuario ";
+      $query1 .= "SET UsuLingua = '" .   $UsuLingua . "' ";
+      $query1 .= "WHERE IdUsuario = " . $_SESSION["IdUsuario"];
+      mysqli_set_charset($connection, "utf8");
+      $result1 = mysqli_query($connection, $query1);
+      if (!$result1) {
+        die("1. Query falhou.");
+      }
+      // MUDA PARÂMETRO DA SESSÃO
+      $_SESSION["UsuLingua"] = $UsuLingua;
 
-            header( "Location: index.php" );
+      header( "Location: index.php" );
 
-            
-            ?>
-            
-        </div>
+      //mysqli_free_result($result1);
+      
+      ?>
+
+    </div>
+  </div>
 </body>
 
 </html>
 
-<?php 
+<?php
 
-mysqli_free_result( $result1 );
+
 
 include_once("inc/i_desconectaDB.php");
 

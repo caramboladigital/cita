@@ -35,9 +35,14 @@ body {
     text-transform: uppercase;
 }
 
-#myTopnav a.menuLang {
+#menuLang {
+    float: right;
+}
+
+#myTopnav a.linguas {
     text-transform: initial;
     font-size: 9px;
+    padding: 10px 10px;
 }
 
 #logoCitacoes {
@@ -66,7 +71,7 @@ body {
 }
 
 #divUsuario {
-    font-size: 12px;
+    font-size: 9px;
     float: right;
 }
 

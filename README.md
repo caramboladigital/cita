@@ -31,5 +31,5 @@ Próximos passos:
 1. Implementação de um sistema de sign-up... já existem usuário e tela de login, mas não fiz o sign-up. Cadastrei os usuários direto no DB
 2. Internacionalização. Está funcionando em português brasileiro, em inglês britânico e espanhol. Seria legal se outras línguas também fossem colocadas.
 3. Possibilidade de obter as referências bibliográficas em outros sistemas (atualmente uso ABNT, mas seria interessante que o usuário pudesse optar por outros sistemas)
-4. Melhorrar o design responsivo... o projeto já tem alguma responsividade, mas o texto do menu, por exemplo,o fica muito pequeno quando abro no celular
+4. Melhorar o design responsivo... o projeto já tem alguma responsividade, mas o texto do menu, por exemplo, fica muito pequeno quando abro no celular
 ...
