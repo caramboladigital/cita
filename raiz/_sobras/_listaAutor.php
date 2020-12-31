@@ -1,26 +1,26 @@
 <?php
-include_once( "inc/i_session.php" );
-include_once( "inc/i_conectaDB.php" );
-include_once( "inc/i_funcoes.php" );
-confirmacao_logado(); 
+// Criar conexão com a DB
+
+include_once( "funcoes.php" );
+include_once( "inc/conectaDB.php" );
 ?>
 <html>
 
 <head>
     <meta charset="utf-8" />
-    <title><?php echo xpre("Autores"); ?></title>
-    <?php include_once( "inc/i_links.php" ); ?>
+    <title>Autores</title>
 </head>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+
 <body>
     <div id="divGeral">
-        <?php include_once( "inc/i_topo.php" ); 
-/*         if ($_SESSION["ehAdmin"]){
-            echo "<a class='botao' href='incluiAutor.php'>" . xpre("Cadastra novo autor") . "</a>";
-        } */
-        ?>
-        <h1><?php echo xpre("Lista de autores"); ?></h1>
+        <?php include_once( "inc/i_topo.php" ); ?>
+        <a class="botao" href="incluiAutor.php"> CADASTRA NOVO AUTOR</a>
+        <h1>Lista de autores</h1>
         <p>
-            <?php
+        <?php
             $i = 0; // i = contador
             $query1 = "SELECT * ";
             $query1 .= "FROM autor ";
@@ -39,37 +39,15 @@ confirmacao_logado();
                 $i++;
                 // carrega lista SELECT
                 //echo "<p>";
-                if ($_SESSION["ehAdmin"]){
-                    echo "&nbsp;";
-                    echo "<a href='editaAutor.php?IdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'editar' src = 'img/ico/editar.png'></a>";
-                    echo "<a href='listaAutor.php?msgDelIdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
-                }
-                echo "<a href='listaCitacoesDeUmAutor.php?IdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' title = 'ver' src = 'img/ico/ver.png'></a>";
-                //
-                // MOSTRA AUTOR
-                //
+                echo "<a href='editaAutor.php?IdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' src = 'img/ico/editar.png'></a>";
+                echo "<a href='deletaAutor.php?IdAutor=" . $row1[ 'IdAutor' ] . "' ><img class='ico' width = '16px' height = '16px' src = 'img/ico/menos.png'></a>";
                 mostraAutor($row1[ 'IdAutor' ]);
-                echo " | ";
                 //echo "</p>";
             }
             mysqli_free_result( $result1 );
         ?>
         </p>
     </div>
-    <?php
-    // SE VIER DO NADA, É LISTA
-    // SE VIER COM GET, É PRA DELETAR O AUTOR
-    
-    if (empty(!$_GET)) {
-        // echo "Tem GET sim";
-        if (array_key_exists("msgDelIdAutor",$_GET)) {
-            $elemento =  xpre("Autor") . ": " . retornaAutor( $_GET[ 'msgDelIdAutor' ] );
-            modal ($_GET[ 'msgDelIdAutor' ] , $elemento , xpre("Você confirma que quer deletar este autor?") , "commitDeleteAutor.php?IdAutor=", "listaAutor.php");
-        }
-    }
-    include_once("inc/i_modal.php");
-
-?>
 </body>
 
 </html>

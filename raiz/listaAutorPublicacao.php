@@ -55,8 +55,11 @@ confirmacao_logado();
         $novaLetraAutor = mb_substr($row1['AutSobrenome'], 0, 1, 'UTF-8');
         if ($ultLetraAutor != $novaLetraAutor) {
           echo "<hr class='hrGrosso'>";
-          echo "<h3><a id=" . $novaLetraAutor . "></a>" . $novaLetraAutor . "</h3>";
-          echo "<hr>";
+          echo "<div>";
+          echo "<h3 class='esq'><a id=" . $novaLetraAutor . "></a>" . $novaLetraAutor . "</h3>";
+          echo "<a class='dir cima' href='#topo' ><img class='ico' width = '16px' height = '16px' title = 'para cima' src = 'img/ico/cima.png'></a>";
+          echo "</div>";
+          echo "<hr class='clear'>";
           $ultLetraAutor = $novaLetraAutor;
         }
 

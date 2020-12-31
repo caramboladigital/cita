@@ -1,3 +1,4 @@
+<a id="topo"></a>
 <div id="topo">
   <div id="logoCitacoes"><a href="index.php"><img src="img/logo-cita.png"></a></div>
   <!-- <div id="logoCarambola"><img src="img/logo-carambola.png"></div> -->

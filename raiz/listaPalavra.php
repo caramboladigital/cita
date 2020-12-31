@@ -56,8 +56,7 @@ confirmacao_logado();
       }
       $row2 = mysqli_fetch_assoc($result2);
       $nString = implode($row2);
-      $nNumero = intval($nString);
-      
+      $nNumero = intval($nString); 
       
 
       //
@@ -65,9 +64,12 @@ confirmacao_logado();
       //
       $novaLetraPalavra = strtoupper(mb_substr($row1['PalPalavra'], 0, 1, 'UTF-8'));
       if ($ultLetraPalavra != $novaLetraPalavra) {
+        echo "<div>";
         echo "<hr class='hrGrosso'>";
-        echo "<h3><a id=" . $novaLetraPalavra . "></a>" . $novaLetraPalavra . "</h3>";
-        echo "<hr>";
+        echo "<h3 class='esq'><a id=" . $novaLetraPalavra . "></a>" . $novaLetraPalavra . "</h3>";
+        echo "<a class='dir cima' href='#topo' ><img class='ico' width = '16px' height = '16px' title = 'para cima' src = 'img/ico/cima.png'></a>";
+        echo "</div>";
+        echo "<hr class='clear'>";
         $ultLetraPalavra = $novaLetraPalavra;
       }
 

@@ -49,6 +49,22 @@ body {
     transform: rotate(-30deg);
 }
 
+.esq {
+    float: left;
+}
+
+.dir {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.cima {
+    margin-top: 22px;
+}
+
 .topnav a.busca {
     /* transform: rotate(-45deg); */
     font-size: 20px;
@@ -65,6 +81,22 @@ body {
 .cadeiaLetras {
     font-size: 18px;
     text-transform: uppercase
+}
+
+.PalavraP {
+    font-size: 16px;
+}
+
+.PalavraM {
+    font-size: 19px;
+}
+
+.PalavraG {
+    font-size: 22px;
+}
+
+.PalavraGG {
+    font-size: 25px;
 }
 
 
