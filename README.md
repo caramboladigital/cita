@@ -14,7 +14,7 @@ Nest steps:
 1. Sig-up sistem... There are users and user control, but I have created them directly on the DB. 
 2. Interenationalization. It is ready in Brazilian Portuguese, British English and Spanish. It would be great if there were some other languages.
 3. Possibility to change the bibliographical reference to other sistems. Now it works on ABNT, a Brazilian bibliographical reference system, but I think ti should be easy to use the system in other sistems like APA, Chicago, MLA etc
-4. Improve the responsive design... it has already some responsiveness, but the texto becemos small when viewed in a smartphone. 
+4. Improve the responsive design... it has already some responsiveness, but the text become small when viewed in a smartphone. 
 
 ______________________
 
