@@ -16,7 +16,8 @@ confirmacao_logado();
   <div id="divGeral">
     <?php include_once("inc/i_topo.php"); ?>
     <?php
-
+    
+    $ultLetraAutor = "";
     $ultPub = "";
     $IdPalavra =  $_GET['IdPalavra'];
     $query1 = "SELECT * ";
@@ -33,7 +34,7 @@ confirmacao_logado();
 
     while ($row1 = mysqli_fetch_assoc($result1)) {
 
-      echo "<h1>" .  xpre("Palavra-chave") . ": " . $row1["PalPalavra"] . "</h1>";
+      echo "<h1>".  xpre("Palavra-chave"). ": " . $row1["PalPalavra"] . "</h1>";
 
       $query2 = "SELECT * ";
       $query2 .= "FROM cit_pal ";
@@ -89,9 +90,12 @@ confirmacao_logado();
                   die("6. Query falhou." . $query6);
                 }
                 $row6 = mysqli_fetch_assoc($result6);
-
+                //
+                // MOSTRA AUTOR
+                //
                 mostraAutor($row5["IdAutor"]);
                 echo ". ";
+                
               }
               //
               // MOSTRA PUBLICACAO

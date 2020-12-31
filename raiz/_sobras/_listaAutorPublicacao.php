@@ -18,7 +18,6 @@ confirmacao_logado();
     <h1><?php echo xpre("Lista de publicações"); ?></h1>
     <div id="listaPub">
       <?php
-
       $query1 = "SELECT * ";
       $query1 .= "FROM aut_pub ";
       $query1 .= "LEFT JOIN autor ";
@@ -29,45 +28,14 @@ confirmacao_logado();
       if (!$result1) {
         die("2. Query falhou:" . $query1);
       }
-
-      //
-      // MONTA LISTA DE LETRAS INICIAL
-      //
-      $cadeiaLetras = "";
-      while ($row1 = mysqli_fetch_assoc($result1)) {
-        $novaLetraAutor = mb_substr($row1['AutSobrenome'], 0, 1, 'UTF-8');
-        if ($cadeiaLetras != $novaLetraAutor) {
-          echo "<span class='cadeiaLetras'><a href='#" . $novaLetraAutor . "'>" . $novaLetraAutor . "</a></span> . ";
-          $cadeiaLetras = $novaLetraAutor;
-        }
-      }
-
-      //
-      // RESETA ARRAY DO RESULT PARA INÍCIO
-      //
-      mysqli_data_seek($result1, 0);
-      $ultLetraAutor = "";
       while ($row1 = mysqli_fetch_assoc($result1)) {
         echo "<p>";
-        //
-        //  GERA ÍNDICE E LINKS ÂNCORA
-        //
-        $novaLetraAutor = mb_substr($row1['AutSobrenome'], 0, 1, 'UTF-8');
-        if ($ultLetraAutor != $novaLetraAutor) {
-          echo "<hr class='hrGrosso'>";
-          echo "<h3><a id=" . $novaLetraAutor . "></a>" . $novaLetraAutor . "</h3>";
-          echo "<hr>";
-          $ultLetraAutor = $novaLetraAutor;
-        }
-
         if ($_SESSION["ehAdmin"]) {
           echo "&nbsp;";
           echo "<a href='editaAutorPublicacao.php?IdPublicacao=" . $row1['IdPublicacao'] . "' ><img class='ico' width = '16px' height = '16px' title = 'editar' src = 'img/ico/editar.png'></a>";
           echo "<a href='listaAutorPublicacao.php?msgDelIdPublicacao=" . $row1['IdPublicacao'] . "' ><img class='ico' width = '16px' height = '16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
         }
         echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row1['IdPublicacao'] . "' ><img class='ico' width = '16px' height = '16px' title = 'ver' src = 'img/ico/ver.png'></a>";
-
-
         mostraAutorDePublicacao($row1["IdPublicacao"]);
         // echo ". ";
         mostraPublicacao($row1["IdPublicacao"]);
