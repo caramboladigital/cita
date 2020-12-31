@@ -14,4 +14,6 @@
 <file name="i_session.php" server="ftp.caramboladigital.com.br/public_html/citacoes/" local="132486573580000000" remote="132502086600000000" Dst="0" />
 <file name="i_topo.php" server="ftp.caramboladigital.com.br/public_html/citacoes/" local="132502650260000000" remote="132502543800000000" Dst="0" />
 <file name="i_conectaDB.php" server="ftp.caramboladigital.com.br/public_html/citacoes/" local="132493370400000000" remote="132493382400000000" Dst="0" />
+<file name="i_links.php" server="ftp.caramboladigital.com.br/public_html/cita/" local="132502168000000000" remote="132524222400000000" Dst="0" />
+<file name="i_topo.php" server="ftp.caramboladigital.com.br/public_html/cita/" local="132503896600000000" remote="132524222400000000" Dst="0" />
 </dwsync>

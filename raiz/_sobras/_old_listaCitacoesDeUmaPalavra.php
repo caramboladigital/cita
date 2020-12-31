@@ -46,12 +46,12 @@ confirmacao_logado();
 
       while ($row2 = mysqli_fetch_assoc($result2)) {
 
-        $query3 = "SELECT IdPublicacao, IdCitacao ";
+        $query3 = "SELECT * ";
         $query3 .= "FROM citacao ";
         $query3 .= "WHERE IdCitacao =" . $row2["IdCitacao"];
         $result3 = mysqli_query($connection, $query3);
         if (!$result3) {
-          die("3. Query falhou: " . $query3);
+          die("3. Query falhou." . $query3);
         }
 
         while ($row3 = mysqli_fetch_assoc($result3)) {
@@ -110,7 +110,16 @@ confirmacao_logado();
             echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3["IdPublicacao"] . "&msgDelIdCitacao=" . $row2["IdCitacao"] . "' ><img class='ico' width = '16px' height = 16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
           }
           echo "<br />";
+          //
+          // MOSTRA CITACAO
+          //
           mostraCitacao($row3["IdCitacao"]);
+
+          //
+          // MOSTRA PALAVRAS
+          //
+          //mostraPalavrasDeCitacao ( $row3[ "IdCitacao" ] );
+          // echo "</p>";
         }
       }
     }

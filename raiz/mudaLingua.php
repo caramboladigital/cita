@@ -35,7 +35,6 @@ confirmacao_logado();
       $_SESSION["UsuLingua"] = $UsuLingua;
 
       header( "Location: index.php" );
-
       //mysqli_free_result($result1);
       
       ?>

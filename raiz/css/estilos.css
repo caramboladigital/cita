@@ -45,6 +45,16 @@ body {
     padding: 10px 10px;
 }
 
+#lupa {
+    transform: rotate(-30deg);
+}
+
+.topnav a.busca {
+    /* transform: rotate(-45deg); */
+    font-size: 20px;
+    /* mask-image: url(img/mascara.png); */
+}
+
 #logoCitacoes {
     width: 200px;
     height: 90px;

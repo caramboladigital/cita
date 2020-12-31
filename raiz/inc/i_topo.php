@@ -36,9 +36,11 @@
       echo "<a href='listaSaudeDbCheckUp.php'>CHECK UP DB</a>";
     }
     ?>
+
     <a href="logout.php">LOGOUT</a>
     <div id="menuLang">
-      <span style="float:left;margin-top:10px"> | </span>
+
+      <a class="busca" href="busca.php"><div id="lupa">&#9906;</div></a>
       <a class="linguas" href="mudaLingua.php?UsuLingua=ptBR">ptBR</a>
       <a class="linguas" href="mudaLingua.php?UsuLingua=enGB">enGB</a>
       <a class="linguas" href="mudaLingua.php?UsuLingua=esES">esES</a>
