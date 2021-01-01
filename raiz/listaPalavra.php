@@ -75,10 +75,10 @@ confirmacao_logado();
 
       if ($_SESSION["ehAdmin"]) {
         echo "&nbsp;";
-        echo "<a href='editaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "' ><img class='ico' width = '16px' height = '16px' title = 'editar' src = 'img/ico/editar.png'></a >";
-        echo "<a href='listaPalavra.php?msgDelIdPalavra=" . $row1['IdPalavra'] . "' ><img class='ico' width = '16px' height = '16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
+        echo "<a href='editaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "' >" . retornaBotao("editar") . "</a >";
+        echo "<a href='listaPalavra.php?msgDelIdPalavra=" . $row1['IdPalavra'] . "' >" . retornaBotao("deletar") . "</a>";
       }
-      echo "<a href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "' ><img class='ico' width = '16px' height = '16px' title = 'ver' src = 'img/ico/ver.png'></a>";
+      echo "<a href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "' >" . retornaBotao("ver") . "</a>";
       mostraPalavra($row1['IdPalavra']);
       echo " (" . $nString . ")</a>";
       echo "</p>";

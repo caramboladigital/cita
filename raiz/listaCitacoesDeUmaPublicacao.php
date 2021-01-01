@@ -71,9 +71,9 @@ confirmacao_logado();
         echo "</p><hr>";
         // Escreve autor e publicação
 
-        echo "<a class='botao' href='incluiPalavraCitacao.php?IdPublicacao=" . $_GET['IdPublicacao'] . "'>CADASTRA NOVA CITAÇÃO</a>";
+        echo "<a class='botao' href='incluiPalavraCitacao.php?IdPublicacao=" . $_GET['IdPublicacao'] . "'>" . xpre("Cadastra nova citação") . "</a>";
       }
-      echo "<h2>". xpre("Citações") . "</h2>";
+      echo "<h2>" . xpre("Citações") . "</h2>";
       //
       //  CITACÕES
       //
@@ -106,8 +106,8 @@ confirmacao_logado();
         }
         // BOTOES
         if ($_SESSION["ehAdmin"]) {
-          echo "<a alt='editar' href='editaPalavraCitacao.php?IdCitacao=" . $row4['IdCitacao'] . "' ><img class='ico' width = '16px' height = 16px' title = 'editar' src = 'img/ico/editar.png'></a>";
-          echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $IdPublicacao . "&msgDelIdCitacao=" . $row4['IdCitacao'] . "' ><img class='ico' width = '16px' height = 16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
+          echo "<a href='editaPalavraCitacao.php?IdCitacao=" . $row4['IdCitacao'] . "' >" . retornaBotao("editar") . "</a>";
+          echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $IdPublicacao . "&msgDelIdCitacao=" . $row4['IdCitacao'] . "' >" . retornaBotao("deletar") . "</a>";
         }
         echo "<br />";
 

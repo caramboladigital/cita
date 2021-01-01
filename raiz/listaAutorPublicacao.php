@@ -65,10 +65,10 @@ confirmacao_logado();
 
         if ($_SESSION["ehAdmin"]) {
           echo "&nbsp;";
-          echo "<a href='editaAutorPublicacao.php?IdPublicacao=" . $row1['IdPublicacao'] . "' ><img class='ico' width = '16px' height = '16px' title = 'editar' src = 'img/ico/editar.png'></a>";
-          echo "<a href='listaAutorPublicacao.php?msgDelIdPublicacao=" . $row1['IdPublicacao'] . "' ><img class='ico' width = '16px' height = '16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
+          echo "<a href='editaAutorPublicacao.php?IdPublicacao=" . $row1['IdPublicacao'] . "' >" . retornaBotao("editar") . "</a>";
+          echo "<a href='listaAutorPublicacao.php?msgDelIdPublicacao=" . $row1['IdPublicacao'] . "' >" . retornaBotao("deletar") . "</a>";
         }
-        echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row1['IdPublicacao'] . "' ><img class='ico' width = '16px' height = '16px' title = 'ver' src = 'img/ico/ver.png'></a>";
+        echo "<a alt='editar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row1['IdPublicacao'] . "' >" . retornaBotao("ver") . "</a>";
 
 
         mostraAutorDePublicacao($row1["IdPublicacao"]);

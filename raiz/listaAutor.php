@@ -14,11 +14,7 @@ confirmacao_logado();
 
 <body>
   <div id="divGeral">
-    <?php include_once("inc/i_topo.php");
-    /*         if ($_SESSION["ehAdmin"]){
-            echo "<a class='botao' href='incluiAutor.php'>" . xpre("Cadastra novo autor") . "</a>";
-        } */
-    ?>
+    <?php include_once("inc/i_topo.php");  ?>
     <h1><?php echo xpre("Lista de autores"); ?></h1>
       <?php
       //$i = 0; // i = contador
@@ -66,10 +62,10 @@ confirmacao_logado();
         //echo "<p>";
         if ($_SESSION["ehAdmin"]) {
           echo "&nbsp;";
-          echo "<a href='editaAutor.php?IdAutor=" . $row1['IdAutor'] . "' ><img class='ico' width = '16px' height = '16px' title = 'editar' src = 'img/ico/editar.png'></a>";
-          echo "<a href='listaAutor.php?msgDelIdAutor=" . $row1['IdAutor'] . "' ><img class='ico' width = '16px' height = '16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
+          echo "<a href='editaAutor.php?IdAutor=" . $row1['IdAutor'] . "' >" . retornaBotao("editar") . "</a>";
+          echo "<a href='listaAutor.php?msgDelIdAutor=" . $row1['IdAutor'] . "' >" . retornaBotao("deletar") ."</a>";
         }
-        echo "<a href='listaCitacoesDeUmAutor.php?IdAutor=" . $row1['IdAutor'] . "' ><img class='ico' width = '16px' height = '16px' title = 'ver' src = 'img/ico/ver.png'></a>";
+        echo "<a href='listaCitacoesDeUmAutor.php?IdAutor=" . $row1['IdAutor'] . "' >" . retornaBotao("ver") . "</a>";
         //
         // MOSTRA AUTOR
         //

@@ -105,8 +105,8 @@ confirmacao_logado();
           echo "</p><hr>";
 
           if ($_SESSION["ehAdmin"]) {
-            echo "<a alt='editar' href='editaPalavraCitacao.php?IdCitacao=" . $row2["IdCitacao"] . "' ><img class='ico' width = '16px' height = 16px' title = 'editar' src = 'img/ico/editar.png'></a>";
-            echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3["IdPublicacao"] . "&msgDelIdCitacao=" . $row2["IdCitacao"] . "' ><img class='ico' width = '16px' height = 16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
+            echo "<a href='editaPalavraCitacao.php?IdCitacao=" . $row2["IdCitacao"] . "' >" . retornaBotao("editar") . "</a>";
+            echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3["IdPublicacao"] . "&msgDelIdCitacao=" . $row2["IdCitacao"] . "' >" . retornaBotao("deletar") . "</a>";
           }
           echo "<br />";
           mostraCitacao($row3["IdCitacao"]);
