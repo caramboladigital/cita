@@ -63,15 +63,19 @@ confirmacao_logado();
           }
           // 3.2 Retorna os dados das publicações
           $row3 = mysqli_fetch_assoc($result3);
+
+
           mostraAutor($row3["IdAutor"]);
+
           echo ". ";
         }
 
         mostraPublicacao($row1["IdPublicacao"]);
         echo "</p><hr>";
         // Escreve autor e publicação
-
-        echo "<a class='botao' href='incluiPalavraCitacao.php?IdPublicacao=" . $_GET['IdPublicacao'] . "'>" . xpre("Cadastra nova citação") . "</a>";
+        if ($_SESSION["ehAdmin"]) {
+          echo "<a class='botao' href='incluiPalavraCitacao.php?IdPublicacao=" . $_GET['IdPublicacao'] . "'>" . xpre("Cadastra nova citação") . "</a>";
+        }
       }
       echo "<h2>" . xpre("Citações") . "</h2>";
       //

@@ -67,7 +67,7 @@ confirmacao_logado();
         echo "<div>";
         echo "<hr class='hrGrosso'>";
         echo "<h3 class='esq'><a id=" . $novaLetraPalavra . "></a>" . $novaLetraPalavra . "</h3>";
-        echo "<a class='dir cima' href='#topo' ><img class='ico' width = '16px' height = '16px' title = 'para cima' src = 'img/ico/cima.png'></a>";
+        echo "<a class='dir cima' href='#topo' >" . retornaBotao("cima") . "</a>";
         echo "</div>";
         echo "<hr class='clear'>";
         $ultLetraPalavra = $novaLetraPalavra;

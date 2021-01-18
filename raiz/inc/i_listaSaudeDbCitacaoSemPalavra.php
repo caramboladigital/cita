@@ -6,7 +6,7 @@ $query1 .= "FROM citacao ";
 mysqli_set_charset($connection,"utf8");
 $result1 = mysqli_query( $connection, $query1 );
 if ( !$result1 ) {
-    die( "1. Query falhou: " . $query1 . "<br />" );
+    die( "1. Query falhou: " . $query1 . ": IdCitacao: " . "<br />" );
 }
 while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
     $query2 = "SELECT COUNT(IdCitacao) ";
@@ -25,10 +25,11 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
 
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
-        //. $row1[ "AutSobrenome" ] . ", " .  $row1[ "AutNome" ] .  
-      echo xpre("Citação") . ": <br /><strong>" . substr( $row1[ "CitCitacao" ], 0, 70) . "... " . "</strong><br /> " . xpre("não tem nenhuma palavra-chave!") .  "<br />";
+
+      echo "<p>" . xpre("Citação") . ": ";
+      echo "<strong>" . substr( $row1[ "CitCitacao" ], 0, 70) . "... " . "</strong><br /> " . xpre("não tem nenhuma palavra-chave!") .  "<br />";
       echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdCitacao=" . $row1[ "IdCitacao" ] . "'>" . xpre("Deleta citação") . "</a>";
-      echo "<hr>";
+      echo "</p><hr>";
     }
 }
 mysqli_free_result( $result1 );

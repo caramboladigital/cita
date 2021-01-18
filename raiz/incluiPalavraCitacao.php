@@ -21,6 +21,8 @@ confirmacao_logado();
         <?php include_once( "inc/i_topo.php" ); ?>
         <?php 
             echo "<hr>";
+            mostraAutorDePublicacao($IdPublicacao);
+            //echo ". ";
             mostraPublicacao($IdPublicacao);
             echo "<hr>";
         ?>

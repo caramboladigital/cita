@@ -25,10 +25,10 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
 
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
-        echo xpre("Autor") . " <strong>";
+        echo xpre("Autor") . ": <strong>";
         mostraAutor($row1[ "IdAutor" ]);
         //. $row1[ "AutSobrenome" ] . ", " .  $row1[ "AutNome" ] .  
-        echo "</strong> " . xpre("não tem nenhuma publicação!") . "<br />";
+        echo "</strong><br />" . xpre("não tem nenhuma publicação!") . "<br />";
         //echo "<a class='botao' href='deletaAutor.php?IdAutor=". $row1[ "IdAutor" ] . "'>DELETA AUTOR</a>";
         echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdAutor=" . $row1[ "IdAutor" ] . "'>" . xpre("Deleta autor") . "</a>";
         echo "<hr>";

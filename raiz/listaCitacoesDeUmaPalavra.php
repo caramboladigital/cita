@@ -96,7 +96,15 @@ confirmacao_logado();
               //
               // MOSTRA PUBLICACAO
               //
+
+
               mostraPublicacao($row4["IdPublicacao"]);
+
+
+              echo "<p class='textoPequeno'><a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row4["IdPublicacao"] ."'>" . xpre("link para a publicação") . "</a></p>";
+
+
+              
               //echo "</p>";
               $ultPub = $row4["IdPublicacao"];
             }
@@ -117,6 +125,8 @@ confirmacao_logado();
     <?php
     ?>
   </div>
+
+
 </body>
 
 </html>

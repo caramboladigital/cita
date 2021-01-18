@@ -57,7 +57,7 @@ confirmacao_logado();
           echo "<hr class='hrGrosso'>";
           echo "<div>";
           echo "<h3 class='esq'><a id=" . $novaLetraAutor . "></a>" . $novaLetraAutor . "</h3>";
-          echo "<a class='dir cima' href='#topo' ><img class='ico' width = '16px' height = '16px' title = 'para cima' src = 'img/ico/cima.png'></a>";
+          echo "<a class='dir cima' href='#topo' >" . retornaBotao("cima") . "</a>";
           echo "</div>";
           echo "<hr class='clear'>";
           $ultLetraAutor = $novaLetraAutor;

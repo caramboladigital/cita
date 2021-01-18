@@ -143,6 +143,10 @@ a {
     color: #Ae4698;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 input {
     font-size: 14px;
 }
@@ -197,6 +201,10 @@ form textarea {
 
 .sobrenome {
     text-transform: uppercase;
+}
+
+.textoPequeno {
+    font-size: 12px;
 }
 
 .nome {}
