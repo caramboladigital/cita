@@ -39,7 +39,7 @@ confirmacao_logado();
         mysqli_set_charset($connection, "utf8");
         $result2 = mysqli_query($connection, $query2);
         if (!$result2) {
-          die("2. Query falhou.");
+          die("2. Query falhou: ");
         }
         $row2 = mysqli_fetch_assoc($result2);
         $nString = implode($row2);
@@ -55,12 +55,15 @@ confirmacao_logado();
         }
         echo "<a class='" . $PalavraClasse . "' href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "' >" . $row1['PalPalavra'] . " (" . $nString . ")</a> | ";
       }
-      mysqli_free_result($result1);
-      mysqli_free_result($result2);
       ?>
     </p>
   </div>
 </body>
 
 </html>
-<?php include_once("inc/i_desconectaDB.php"); ?>
+
+<?php
+mysqli_free_result($result1);
+mysqli_free_result($result2);
+include_once("inc/i_desconectaDB.php");
+?>

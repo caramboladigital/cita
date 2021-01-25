@@ -73,7 +73,7 @@ confirmacao_logado();
         //echo " | ";
         echo "</p>";
       }
-      mysqli_free_result($result1);
+
       ?>
   </div>
   <?php
@@ -93,5 +93,7 @@ confirmacao_logado();
 </body>
 
 </html>
-<?php include_once("inc/i_desconectaDB.php");
+<?php 
+mysqli_free_result($result1);
+include_once("inc/i_desconectaDB.php");
 ?>

@@ -101,6 +101,6 @@ confirmacao_logado();
 
 </html>
 <?php
-// 5. Close connection
+mysqli_free_result($result1);
 include_once("inc/i_desconectaDB.php");
 ?>

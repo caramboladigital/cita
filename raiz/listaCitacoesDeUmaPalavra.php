@@ -8,7 +8,7 @@ confirmacao_logado();
 <html>
 
 <head>
-  <title><?php echo xpre("Lista citações associadas a uma palavra-chave"); ?></title>
+  <title><?php echo xpre("Lista citações de uma palavra-chave"); ?></title>
   <?php include_once("inc/i_links.php"); ?>
 </head>
 
@@ -19,114 +19,65 @@ confirmacao_logado();
 
     $ultPub = "";
     $IdPalavra =  $_GET['IdPalavra'];
-    $query1 = "SELECT * ";
-    $query1 .= "FROM palavra ";
+
+    echo "<h1>" .  xpre("Palavra-chave") . ": " . retornaPalavra($IdPalavra) . "</h1>";
+
+    $query1 = "SELECT IdCitacao ";
+    $query1 .= "FROM cit_pal ";
     $query1 .= "WHERE IdPalavra = " . $IdPalavra;
 
-    //echo "query1: " . $query1 . "<br />";
     mysqli_set_charset($connection, "utf8");
     $result1 = mysqli_query($connection, $query1);
 
     if (!$result1) {
-      die("1. Query falhou:" . $query1);
+      die("1. Query falhou: " . $query1);
     }
 
     while ($row1 = mysqli_fetch_assoc($result1)) {
 
-      echo "<h1>" .  xpre("Palavra-chave") . ": " . $row1["PalPalavra"] . "</h1>";
-
-      $query2 = "SELECT * ";
-      $query2 .= "FROM cit_pal ";
-      $query2 .= "WHERE IdPalavra = " . $IdPalavra;
-      mysqli_set_charset($connection, "utf8");
+      $query2 = "SELECT IdPublicacao, IdCitacao ";
+      $query2 .= "FROM citacao ";
+      $query2 .= "WHERE IdCitacao =" . $row1["IdCitacao"] . " ";
       $result2 = mysqli_query($connection, $query2);
-
       if (!$result2) {
-        die("2. Query falhou." . $query2);
+        die("2. Query falhou: " . $query2);
       }
 
       while ($row2 = mysqli_fetch_assoc($result2)) {
 
-        $query3 = "SELECT IdPublicacao, IdCitacao ";
-        $query3 .= "FROM citacao ";
-        $query3 .= "WHERE IdCitacao =" . $row2["IdCitacao"];
+        $query3 = "SELECT * ";
+        $query3 .= "FROM aut_pub ";
+        $query3 .= "WHERE IdPublicacao = " . $row2["IdPublicacao"] . " ";
         $result3 = mysqli_query($connection, $query3);
         if (!$result3) {
-          die("3. Query falhou: " . $query3);
+          die("5. Query falhou." . $query3);
         }
+        if ($ultPub != $row2["IdPublicacao"]) {
+          echo "<p class='blocoPublicacao'>";
+            mostraAutorDePublicacao($row2["IdPublicacao"]);
+            // mostraAutor($row6["IdAutor"]);
 
-        while ($row3 = mysqli_fetch_assoc($result3)) {
+          //
+          // MOSTRA PUBLICACAO
+          //
+          mostraPublicacao($row2["IdPublicacao"]);
+          echo "<p class='textoPequeno'><a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row2["IdPublicacao"] . "'>" . xpre("link para a publicação") . "</a></p>";
+          $ultPub = $row2["IdPublicacao"];
 
-          $query4 = "SELECT * ";
-          $query4 .= "FROM publicacao ";
-          $query4 .= "WHERE IdPublicacao = " .  $row3["IdPublicacao"] . " ";
-          $query4 .= "ORDER BY PubTitulo;";
-
-          mysqli_set_charset($connection, "utf8");
-          $result4 = mysqli_query($connection, $query4);
-          if (!$result4) {
-            die("4. Query falhou." . $query4);
-          }
-
-          while ($row4 = mysqli_fetch_assoc($result4)) {
-
-            $query5 = "SELECT * ";
-            $query5 .= "FROM aut_pub ";
-            $query5 .= "WHERE IdPublicacao = " . $row4["IdPublicacao"];
-            $result5 = mysqli_query($connection, $query5);
-            if (!$result5) {
-              die("5. Query falhou." . $query5);
-            }
-            if ($ultPub != $row4["IdPublicacao"]) {
-              echo "<p class='blocoPublicacao'>";
-              while ($row5 = mysqli_fetch_assoc($result5)) {
-                $query6 = "SELECT * ";
-                $query6 .= "FROM autor ";
-                $query6 .= "WHERE IdAutor =" .  $row5["IdAutor"];
-                mysqli_set_charset($connection, "utf8");
-                $result6 = mysqli_query($connection, $query6);
-                if (!$result6) {
-                  die("6. Query falhou." . $query6);
-                }
-                $row6 = mysqli_fetch_assoc($result6);
-
-                mostraAutor($row5["IdAutor"]);
-                echo ". ";
-              }
-              //
-              // MOSTRA PUBLICACAO
-              //
-
-
-              mostraPublicacao($row4["IdPublicacao"]);
-
-
-              echo "<p class='textoPequeno'><a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row4["IdPublicacao"] ."'>" . xpre("link para a publicação") . "</a></p>";
-
-
-              
-              //echo "</p>";
-              $ultPub = $row4["IdPublicacao"];
-            }
-          }
-
-          echo "</p><hr>";
-
-          if ($_SESSION["ehAdmin"]) {
-            echo "<a href='editaPalavraCitacao.php?IdCitacao=" . $row2["IdCitacao"] . "' >" . retornaBotao("editar") . "</a>";
-            echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3["IdPublicacao"] . "&msgDelIdCitacao=" . $row2["IdCitacao"] . "' >" . retornaBotao("deletar") . "</a>";
-          }
-          echo "<br />";
-          mostraCitacao($row3["IdCitacao"]);
         }
+        echo "<hr>";
+        if ($_SESSION["ehAdmin"]) {
+          echo "<a href='editaPalavraCitacao.php?IdCitacao=" . $row1["IdCitacao"] . "' >" . retornaBotao("editar") . "</a>";
+          echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row2["IdPublicacao"] . "&msgDelIdCitacao=" . $row1["IdCitacao"] . "' >" . retornaBotao("deletar") . "</a>";
+        }
+        echo "<br />";
+        mostraCitacao($row1["IdCitacao"]);
       }
     }
+
     ?>
-    <?php
-    ?>
+
   </div>
-
-
 </body>
 
 </html>
@@ -135,9 +86,5 @@ confirmacao_logado();
 mysqli_free_result($result1);
 mysqli_free_result($result2);
 mysqli_free_result($result3);
-mysqli_free_result($result4);
-mysqli_free_result($result5);
-mysqli_free_result($result6);
-
 include_once("inc/i_desconectaDB.php");
 ?>

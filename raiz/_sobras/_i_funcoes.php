@@ -123,22 +123,30 @@ function mostraAutor($IdAutor)
 function mostraAutorDePublicacao($IdPublicacao)
 {
   global $connection;
+
+  $query1 = "SELECT IdAutor ";
+  $query1 .= "FROM aut_pub ";
+  $query1 .= "WHERE IdPublicacao = " . $IdPublicacao ;
+  mysqli_set_charset($connection, "utf8");
+  $result1 = mysqli_query($connection, $query1);
+  if (!$result1) {
+    die("Query 1: " . $query1);
+  }
+  while ($row1 = mysqli_fetch_assoc($result1)) {
     $query2 = "SELECT * ";
     $query2 .= "FROM autor ";
-    $query2 .= "WHERE IdAutor IN (";
-    $query2 .=  "SELECT IdAutor ";
-    $query2 .=  "FROM  aut_pub ";
-    $query2 .=  "WHERE IdPublicacao = " . $IdPublicacao . ") ";
-    $query2 .= "ORDER BY AutSobrenome ASC ";
+    $query2 .= "WHERE IdAutor =" . $row1["IdAutor"] . " ";
+    $query2 .= "ORDER BY AutNome ASC";
     $result2 = mysqli_query($connection, $query2);
     if (!$result2) {
       die("Query 2 falhou: " . $query2);
     }
-    while ($row2 = mysqli_fetch_assoc($result2)) {
-      mostraAutor($row2["IdAutor"]);
-      echo ". ";
-    }
+    $row2 = mysqli_fetch_assoc($result2);
+    mostraAutor($row2["IdAutor"]);
+    echo ". ";
+  }
 }
+
 
 function retornaAutor($IdAutor)
 {
