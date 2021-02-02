@@ -1,16 +1,17 @@
-<h3><?php echo xpre("Lista publicações sem citação"); ?></h3>
+<h3><?php echo xpre("Lista citações sem palavra-chave"); ?></h3>
 <?php
 $query1 = "SELECT * ";
-$query1 .= "FROM publicacao ";
+$query1 .= "FROM citacao ";
+//$query1 .= "ORDER BY AutSobrenome ASC";
 mysqli_set_charset($connection,"utf8");
 $result1 = mysqli_query( $connection, $query1 );
 if ( !$result1 ) {
-    die( "1. Query falhou: " . $query1 . "<br />" );
+    die( "1. Query falhou: " . $query1 . ": IdCitacao: " . "<br />" );
 }
 while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
-    $query2 = "SELECT COUNT(IdPublicacao) ";
-    $query2 .= "FROM citacao ";
-    $query2 .= "WHERE IdPublicacao =". $row1["IdPublicacao"];
+    $query2 = "SELECT COUNT(IdCitacao) ";
+    $query2 .= "FROM cit_pal ";
+    $query2 .= "WHERE IdCitacao =". $row1["IdCitacao"];
     mysqli_set_charset($connection,"utf8");
     $result2 = mysqli_query( $connection, $query2 );
     if ( !$result2 ) {
@@ -24,9 +25,11 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
 
     // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
-      echo xpre("Publicação") . ": <strong>" . $row1[ "PubTitulo" ] .  "</strong> ".  xpre("não está vinculada a nenhuma citação!") .  "<br />";
-      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdPublicacao=" . $row1[ "IdPublicacao" ] . "'>". xpre("Deleta publicação") . "</a>";
-      echo "<hr>";
+
+      echo "<p>" . xpre("Citação") . ": ";
+      echo "<strong>" . substr( $row1[ "CitCitacao" ], 0, 70) . "... " . "</strong><br /> " . xpre("não tem nenhuma palavra-chave!") .  "<br />";
+      echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdCitacao=" . $row1[ "IdCitacao" ] . "'>" . xpre("Deleta citação") . "</a>";
+      echo "</p><hr>";
     }
 }
 mysqli_free_result( $result1 );

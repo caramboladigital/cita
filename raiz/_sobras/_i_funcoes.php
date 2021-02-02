@@ -71,10 +71,6 @@ function mostraCitacao($IdCitacao)
     echo "<strong>" . xpre("Página") . ": </strong> " . $row["CitPg"] . "<br />";
   }
   echo "<strong>" . xpre("Citação") . ": </strong> <br /><span class='citacao'>" . $row["CitCitacao"] . "</span><br />";
-
-  mostraReferenciaCurta($IdCitacao);
-
-
   if ($row["CitComentario"]) {
     echo "<strong>" . xpre("Comentário") . ": </strong><br /><span class='comentario'>" . $row["CitComentario"] . "</span><br />";
   }
@@ -102,95 +98,6 @@ function retornaCitacao($IdCitacao)
   return $citacao;
 }
 
-function mostraReferenciaCurta($IdCitacao)
-{
-  global $connection;
-
-  $autor = "";
-
-  $query1 = "SELECT * ";
-  $query1 .= "FROM citacao ";
-  $query1 .= "WHERE IdCitacao = " . $IdCitacao . " ";
-  mysqli_set_charset($connection, "utf8");
-  $result1 = mysqli_query($connection, $query1);
-  if (!$result1) {
-    die("Query mostraSobrenome1 falhou: " . $query1);
-  }
-  $row1 = mysqli_fetch_assoc($result1);
-
-  $pg = $row1["CitPg"];
-
-  $query2 = "SELECT * ";
-  $query2 .= "FROM publicacao ";
-  $query2 .= "WHERE IdPublicacao = " . $row1["IdPublicacao"];
-  mysqli_set_charset($connection, "utf8");
-  $result2 = mysqli_query($connection, $query2);
-  if (!$result2) {
-    die("Query mostraPublicacao falhou: " . $query2);
-  }
-
-  $row2 = mysqli_fetch_assoc($result2);
-  $ano = $row2["PubAno"];
-
-  $query3 = "SELECT * ";
-  $query3 .= "FROM aut_pub ";
-  $query3 .= "WHERE IdPublicacao = " . $row1["IdPublicacao"];
-  mysqli_set_charset($connection, "utf8");
-  $result3 = mysqli_query($connection, $query3);
-  if (!$result3) {
-    die("Query mostraAut_pub falhou: " . $query3);
-  }
-  $i = 1;
-  $autores = "";
-
-  while ($row3 = mysqli_fetch_assoc($result3)) {
-    $query4 = "SELECT AutSobrenome ";
-    $query4 .= "FROM autor ";
-    $query4 .= "WHERE IdAutor = " . $row3["IdAutor"];
-    mysqli_set_charset($connection, "utf8");
-    $result4 = mysqli_query($connection, $query4);
-    if (!$result4) {
-      die("Query mostraAutor falhou: " . $query4);
-    }
-    $row4 = mysqli_fetch_assoc($result4);
-
-    // 
-    // LOOP PARA CONTAGEM DE AUTORES
-    //
-    $r = mysqli_num_rows($result3);
-    $rn = intval($r); // total dos autores
-    //echo implode($row4);
-    //echo "<br/>rn:" . $rn;
-    //echo "<br/>i:" . $i; // índice do autor corrente
-
-    if ($i == 1) {
-      $autores = "(" . implode($row4);
-    } else if ($i == 2 and $rn == 2) {
-      $autores = $autores . " e " . implode($row4);
-    } else {
-      $autores = $autores . "; " . implode($row4);
-    }
-    $i++;
-  }
-
-
-  echo $autores . ", ";
-  if ($ano) {
-    echo $ano;
-  } else
-
-  if ($row2["PubUrl"]) {
-    echo " online";
-  }
-  if ($pg) {
-    echo ", p. " . $pg;
-  }
-  echo ") <br/>";
-  mysqli_free_result($result1);
-  mysqli_free_result($result2);
-  mysqli_free_result($result3);
-  mysqli_free_result($result4);
-}
 
 
 function mostraAutor($IdAutor)
@@ -216,17 +123,26 @@ function mostraAutor($IdAutor)
 function mostraAutorDePublicacao($IdPublicacao)
 {
   global $connection;
+
   $query1 = "SELECT IdAutor ";
   $query1 .= "FROM aut_pub ";
-  $query1 .= "WHERE IdPublicacao = " . $IdPublicacao . " ";
+  $query1 .= "WHERE IdPublicacao = " . $IdPublicacao ;
   mysqli_set_charset($connection, "utf8");
   $result1 = mysqli_query($connection, $query1);
-
   if (!$result1) {
     die("Query 1: " . $query1);
   }
   while ($row1 = mysqli_fetch_assoc($result1)) {
-    mostraAutor($row1["IdAutor"]);
+    $query2 = "SELECT * ";
+    $query2 .= "FROM autor ";
+    $query2 .= "WHERE IdAutor =" . $row1["IdAutor"] . " ";
+    $query2 .= "ORDER BY AutNome ASC";
+    $result2 = mysqli_query($connection, $query2);
+    if (!$result2) {
+      die("Query 2 falhou: " . $query2);
+    }
+    $row2 = mysqli_fetch_assoc($result2);
+    mostraAutor($row2["IdAutor"]);
     echo ". ";
   }
 }
@@ -362,25 +278,6 @@ function xpre($texto)
   }
 }
 
-function tiraAcento($letra)
-{
-  switch($letra) {
-    case "À": return "A"; break;
-    case "Á": return "A"; break;
-    case "É": return "E"; break;
-    case "Í": return "I"; break;
-    case "Ó": return "O"; break;
-    case "Ú": return "U"; break;
-    case "Ã": return "A"; break;
-    case "Õ": return "O"; break;
-    case "á": return "A"; break;
-    case "é": return "E"; break;
-    case "í": return "I"; break;
-    case "ó": return "O"; break;
-    case "ú": return "U"; break;
-    default: return $letra; break;
-  }
-}
 
 function retornaBotao($funcao)
 {

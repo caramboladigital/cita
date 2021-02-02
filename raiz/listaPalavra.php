@@ -32,6 +32,10 @@ confirmacao_logado();
     $cadeiaLetras = "";
     while ($row1 = mysqli_fetch_assoc($result1)) {
       $novaLetraPalavra = strtoupper(mb_substr($row1['PalPalavra'], 0, 1, 'UTF-8'));
+      //
+      // SE HOUVER ACENTO NA PRIMEIRA LETRA, TROCA POR LETRA NÃO ACENTUADA
+      //
+      $novaLetraPalavra = tiraAcento($novaLetraPalavra);
       if ($cadeiaLetras != $novaLetraPalavra) {
         echo "<span class='cadeiaLetras'><a href='#" . $novaLetraPalavra . "'>" . $novaLetraPalavra . "</a></span> . ";
         $cadeiaLetras = $novaLetraPalavra;
@@ -56,18 +60,23 @@ confirmacao_logado();
       }
       $row2 = mysqli_fetch_assoc($result2);
       $nString = implode($row2);
-      $nNumero = intval($nString); 
-      
+      $nNumero = intval($nString);
+
 
       //
       //  GERA ÍNDICE E LINKS ÂNCORA
       //
       $novaLetraPalavra = strtoupper(mb_substr($row1['PalPalavra'], 0, 1, 'UTF-8'));
+      //
+      // SE HOUVER ACENTO NA PRIMEIRA LETRA, TROCA POR LETRA NÃO ACENTUADA
+      //
+      $novaLetraPalavra = tiraAcento($novaLetraPalavra);
+
       if ($ultLetraPalavra != $novaLetraPalavra) {
         echo "<div>";
         echo "<hr class='hrGrosso'>";
         echo "<h3 class='esq'><a id=" . $novaLetraPalavra . "></a>" . $novaLetraPalavra . "</h3>";
-        echo "<a class='dir cima' href='#topo' ><img class='ico' width = '16px' height = '16px' title = 'para cima' src = 'img/ico/cima.png'></a>";
+        echo "<a class='dir cima' href='#topo' >" . retornaBotao("cima") . "</a>";
         echo "</div>";
         echo "<hr class='clear'>";
         $ultLetraPalavra = $novaLetraPalavra;
@@ -104,5 +113,9 @@ confirmacao_logado();
 
 </html>
 <?php
+
+mysqli_free_result($result1);
+mysqli_free_result($result2);
+
 include_once("inc/i_desconectaDB.php");
 ?>

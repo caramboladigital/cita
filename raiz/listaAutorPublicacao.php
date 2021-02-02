@@ -36,6 +36,11 @@ confirmacao_logado();
       $cadeiaLetras = "";
       while ($row1 = mysqli_fetch_assoc($result1)) {
         $novaLetraAutor = mb_substr($row1['AutSobrenome'], 0, 1, 'UTF-8');
+        //
+        // SE HOUVER ACENTO NA PRIMEIRA LETRA, TROCA POR LETRA NÃO ACENTUADA
+        //
+        $novaLetraAutor = tiraAcento($novaLetraAutor);
+
         if ($cadeiaLetras != $novaLetraAutor) {
           echo "<span class='cadeiaLetras'><a href='#" . $novaLetraAutor . "'>" . $novaLetraAutor . "</a></span> . ";
           $cadeiaLetras = $novaLetraAutor;
@@ -53,11 +58,16 @@ confirmacao_logado();
         //  GERA ÍNDICE E LINKS ÂNCORA
         //
         $novaLetraAutor = mb_substr($row1['AutSobrenome'], 0, 1, 'UTF-8');
+        //
+        // SE HOUVER ACENTO NA PRIMEIRA LETRA, TROCA POR LETRA NÃO ACENTUADA
+        //
+        $novaLetraAutor = tiraAcento($novaLetraAutor);
+        
         if ($ultLetraAutor != $novaLetraAutor) {
           echo "<hr class='hrGrosso'>";
           echo "<div>";
           echo "<h3 class='esq'><a id=" . $novaLetraAutor . "></a>" . $novaLetraAutor . "</h3>";
-          echo "<a class='dir cima' href='#topo' ><img class='ico' width = '16px' height = '16px' title = 'para cima' src = 'img/ico/cima.png'></a>";
+          echo "<a class='dir cima' href='#topo' >" . retornaBotao("cima") . "</a>";
           echo "</div>";
           echo "<hr class='clear'>";
           $ultLetraAutor = $novaLetraAutor;
@@ -101,6 +111,7 @@ confirmacao_logado();
 
 </html>
 <?php
-// 5. Close connection
+
+mysqli_free_result($result1);
 include_once("inc/i_desconectaDB.php");
 ?>

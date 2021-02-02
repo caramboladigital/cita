@@ -1,4 +1,4 @@
-<h3><?php echo xpre("Lista publicações sem citação"); ?></h3>
+<h3><?php echo xpre("Lista publicações sem autor"); ?></h3>
 <?php
 $query1 = "SELECT * ";
 $query1 .= "FROM publicacao ";
@@ -9,7 +9,7 @@ if ( !$result1 ) {
 }
 while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
     $query2 = "SELECT COUNT(IdPublicacao) ";
-    $query2 .= "FROM citacao ";
+    $query2 .= "FROM aut_pub ";
     $query2 .= "WHERE IdPublicacao =". $row1["IdPublicacao"];
     mysqli_set_charset($connection,"utf8");
     $result2 = mysqli_query( $connection, $query2 );
@@ -19,12 +19,14 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
     $row2 = mysqli_fetch_assoc( $result2 );
     $nString = implode( $row2 );
     $nNumero = intval($nString);
-
-    //echo $nString . "<br />";
-
-    // echo "Autor " . $row1[ "AutSobrenome" ] . "tem " . $nString . " obras relacionadas. <br />";
     if ($nNumero == 0) {
-      echo xpre("Publicação") . ": <strong>" . $row1[ "PubTitulo" ] .  "</strong> ".  xpre("não está vinculada a nenhuma citação!") .  "<br />";
+
+
+      echo "<p>" . xpre("Publicação") . ": ";
+      mostraPublicacao($row1["IdPublicacao"]);
+      echo "<span class='textoPequeno'><a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row1["IdPublicacao"] ."'></a></span>";
+      echo "</p>";
+      echo xpre("não está vinculada a nenhuma citação!") .  "<br />";
       echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdPublicacao=" . $row1[ "IdPublicacao" ] . "'>". xpre("Deleta publicação") . "</a>";
       echo "<hr>";
     }
@@ -32,3 +34,4 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
 mysqli_free_result( $result1 );
 mysqli_free_result( $result2 );
 ?>
+
