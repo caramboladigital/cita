@@ -99,6 +99,51 @@ body {
     font-size: 25px;
 }
 
+.chip {
+    display: inline-flex;
+    flex-direction: row;
+    background-color: #ddd;
+    border: none;
+    height: 26px;
+    outline: none;
+    padding: 0;
+    margin: 5px;
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 13px;
+    vertical-align: middle;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.chip-palavra {
+    cursor: inherit;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.chip-numero {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-color: #bbb;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    align-items: center;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+    width: 26px;
+    color: #555;
+    height: 26px;
+    font-size: 14px;
+    margin-right: -4px;
+}
+
 
 /* ELEMENTOS */
 

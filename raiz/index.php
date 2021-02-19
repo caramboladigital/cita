@@ -20,7 +20,7 @@ confirmacao_logado();
     <h1><?php echo xpre("Busca por palavra-chave"); ?></h1>
     <p><?php echo xpre("Palavra (X) | X = número de vezes que a palavra foi associada a uma citação."); ?></p>
     <hr>
-    <p>
+    
       <?php
       $query1 = "SELECT * ";
       $query1 .= "FROM palavra ";
@@ -43,22 +43,26 @@ confirmacao_logado();
         }
         $row2 = mysqli_fetch_assoc($result2);
         $nString = implode($row2);
-        $nNumero = intval($nString);
-        if ($nNumero < 3) {
-          $PalavraClasse = "PalavraP";
-        } elseif ($nNumero >= 3 and $nNumero < 9) {
-          $PalavraClasse = "PalavraM";
-        } elseif ($nNumero >= 9 and $nNumero < 20) {
-          $PalavraClasse = "PalavraG";
-        } elseif ($nNumero >= 20) {
-          $PalavraClasse = "PalavraGG";
-        }
-        echo "<a class='" . $PalavraClasse . "' href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "' >" . $row1['PalPalavra'] . " (" . $nString . ")</a> | ";
+        // $nNumero = intval($nString);
+        // if ($nNumero < 3) {
+        //   $PalavraClasse = "PalavraP";
+        // } elseif ($nNumero >= 3 and $nNumero < 9) {
+        //   $PalavraClasse = "PalavraM";
+        // } elseif ($nNumero >= 9 and $nNumero < 20) {
+        //   $PalavraClasse = "PalavraG";
+        // } elseif ($nNumero >= 20) {
+        //   $PalavraClasse = "PalavraGG";
+        // }
+        echo "<a class='chip' href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "'>";
+        echo "<div class='chip-palavra'>" . $row1['PalPalavra'] . "</div>";
+        echo "<div class='chip-numero'>" . $nString . "</div> ";
+        echo "</a> ";
       }
+      
       mysqli_free_result($result1);
       mysqli_free_result($result2);
       ?>
-    </p>
+    
   </div>
 </body>
 
