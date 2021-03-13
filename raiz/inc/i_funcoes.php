@@ -386,16 +386,16 @@ function retornaBotao($funcao)
 {
   switch ($funcao) {
     case "editar":
-      return "<img class='ico' width = '16px' height = '16px' title = '" . xpre("editar") . "' src = 'img/ico/editar.png'>";
+      return "<img class='ico' width = '20px' height = '20px' title = '" . xpre("editar") . "' src = 'img/ico/editar.svg'>";
       break;
     case "deletar":
-      return "<img class='ico' width = '16px' height = '16px' title = '" . xpre("deletar") . "' src = 'img/ico/menos.png'>";
+      return "<img class='ico' width = '20px' height = '20px' title = '" . xpre("deletar") . "' src = 'img/ico/apagar.svg'>";
       break;
     case "ver":
-      return "<img class='ico' width = '16px' height = '16px' title = '" . xpre("ver") . "' src = 'img/ico/ver.png'>";
+      return "<img class='ico' width = '20px' height = '20px' title = '" . xpre("ver") . "' src = 'img/ico/ver.svg'>";
       break;
     case "cima":
-      return "<img class='ico' width = '16px' height = '16px' title = '" . xpre("para cima") . "' src = 'img/ico/cima.png'>";
+      return "<img class='ico' width = '20px' height = '20px' title = '" . xpre("para cima") . "' src = 'img/ico/cima.svg'>";
       break;
   }
 }

@@ -130,7 +130,7 @@ body {
     display: flex;
     position: relative;
     overflow: hidden;
-    background-color: #bbb;
+    background-color: #333;
     font-size: 1.25rem;
     flex-shrink: 0;
     align-items: center;
@@ -138,10 +138,10 @@ body {
     border-radius: 50%;
     justify-content: center;
     width: 26px;
-    color: #555;
+    color: #fff;
     height: 26px;
     font-size: 14px;
-    margin-right: -4px;
+    margin-right: 0px;
 }
 
 
@@ -212,8 +212,12 @@ form textarea {
     height: 60px;
 }
 
-.ico {
-    padding: 0 5px 0 0;
+a img.ico {
+    padding: 0 6px 0 0;
+}
+
+a:hover img.ico {
+    transform: scale(1.15);
 }
 
 .blocoPublicacao {

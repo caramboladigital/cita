@@ -75,7 +75,7 @@ confirmacao_logado();
       if ($ultLetraPalavra != $novaLetraPalavra) {
         echo "<div>";
         echo "<hr class='hrGrosso'>";
-        echo "<h3 class='esq'><a id=" . $novaLetraPalavra . "></a>" . $novaLetraPalavra . "</h3>";
+        echo "<h3 class='esq'><a id='" . $novaLetraPalavra . "'></a>" . $novaLetraPalavra . "</h3>";
         echo "<a class='dir cima' href='#topo' >" . retornaBotao("cima") . "</a>";
         echo "</div>";
         echo "<hr class='clear'>";

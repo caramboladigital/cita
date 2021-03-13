@@ -43,7 +43,11 @@ confirmacao_logado();
         }
         $row2 = mysqli_fetch_assoc($result2);
         $nString = implode($row2);
-        // $nNumero = intval($nString);
+        $nNumero = intval($nString);
+        $opacidade = 0.1+($nNumero*0.03);
+        if ($opacidade > 1){
+          $opacidade = 1;
+        }
         // if ($nNumero < 3) {
         //   $PalavraClasse = "PalavraP";
         // } elseif ($nNumero >= 3 and $nNumero < 9) {
@@ -55,7 +59,7 @@ confirmacao_logado();
         // }
         echo "<a class='chip' href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "'>";
         echo "<div class='chip-palavra'>" . $row1['PalPalavra'] . "</div>";
-        echo "<div class='chip-numero'>" . $nString . "</div> ";
+        echo "<div class='chip-numero' style='background-color:rgba(0,0,0," . $opacidade . ");'>" . $nString . "</div> ";
         echo "</a> ";
       }
       
