@@ -56,6 +56,8 @@ confirmacao_logado();
         mostraPublicacao($row1["IdPublicacao"]);
         echo "</p><hr>";
 
+        echo "<a class='botao' href='incluiPalavraCitacao.php?IdPublicacao=" . $row1["IdPublicacao"] . "'>" . xpre("Cadastra nova citação") . "</a>";
+
         echo "<h2>" . xpre("Citações") . "</h2>";
         //
         //  CITACÕES

@@ -22,6 +22,7 @@ while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
     if ($nNumero == 0) {
       echo xpre("Publicação") . ": <strong>" . $row1[ "PubTitulo" ] .  "</strong> ".  xpre("não está vinculada a nenhum autor!") . "<br />";
       echo "<a class='botao' href='listaSaudeDbCheckUp.php?msgDelIdPublicacao=" . $row1[ "IdPublicacao" ] . "'>" . xpre("Deleta publicação"). "</a>";  
+      echo "<a class='botao' href='editaAutorPublicacao.php?IdPublicacao=" . $row1['IdPublicacao'] . "'>" . xpre("Edita publicação") . "</a>";
       echo "<hr>";
     }
 }

@@ -30,8 +30,6 @@ confirmacao_logado();
 
 
     <?php
-    // SE VIER DO NADA, É LISTA
-    // SE VIER COM GET, É PRA DELETAR O AUTOR
      if (empty(!$_GET)) {
         // echo "Tem GET sim";
         if (array_key_exists("msgDelIdAutor",$_GET)) {
