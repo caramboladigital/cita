@@ -19,7 +19,7 @@ confirmacao_logado();
 
     <h1><?php echo xpre("Busca por palavra-chave"); ?></h1>
     <p><?php echo xpre("Palavra (X) | X = número de vezes que a palavra foi associada a uma citação."); ?></p>
-    <p class="textoP">Alternar para <a href="tagCloud.php">visualização tipo tagCloud</a></p>
+    <p class="textoP">Alternar para <a href="index.php">visualização tipo nuvem de chips</a></p>
     <hr>
     
       <?php
@@ -45,22 +45,10 @@ confirmacao_logado();
         $row2 = mysqli_fetch_assoc($result2);
         $nString = implode($row2);
         $nNumero = intval($nString);
-        $opacidade = 0.1+($nNumero*0.03);
-        if ($opacidade > 1){
-          $opacidade = 1;
-        }
-        // if ($nNumero < 3) {
-        //   $PalavraClasse = "PalavraP";
-        // } elseif ($nNumero >= 3 and $nNumero < 9) {
-        //   $PalavraClasse = "PalavraM";
-        // } elseif ($nNumero >= 9 and $nNumero < 20) {
-        //   $PalavraClasse = "PalavraG";
-        // } elseif ($nNumero >= 20) {
-        //   $PalavraClasse = "PalavraGG";
-        // }
-        echo "<a class='chip' href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "'>";
-        echo "<div class='chip-palavra'>" . $row1['PalPalavra'] . "</div>";
-        echo "<div class='chip-numero' style='background-color:rgba(0,0,0," . $opacidade . ");'>" . $nString . "</div> ";
+        $tamanhoDaFonte = 12+intval(3* sqrt($nNumero));
+        echo "<a class='chip2' href='listaCitacoesDeUmaPalavra.php?IdPalavra=" . $row1['IdPalavra'] . "'>";
+        echo "<div class='chip2-palavra' style='font-size: " . $tamanhoDaFonte . "'>" . $row1['PalPalavra'] . "</div>";
+        echo "<div class='chip2-numero'>" . $nString . "</div> ";
         echo "</a> ";
       }
       

@@ -71,6 +71,10 @@ body {
     /* mask-image: url(img/mascara.png); */
 }
 
+.textoP {
+    font-size: 11px;
+}
+
 #logoCitacoes {
     width: 200px;
     height: 90px;
@@ -142,6 +146,37 @@ body {
     height: 26px;
     font-size: 14px;
     margin-right: 0px;
+}
+
+.chip2 {
+    position: relative;
+    display: inline-block;
+    padding: 8px 5px;
+    float: left;
+}
+
+.chip2-palavra:hover {
+    color: #000;
+}
+
+.chip2-numero {
+    top: -5px;
+    left: 105%;
+    visibility: hidden;
+    width: 24px;
+    height: 24px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 5px;
+    border-radius: 50%;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+.chip2:hover .chip2-numero {
+    visibility: visible;
 }
 
 
