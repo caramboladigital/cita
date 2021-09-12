@@ -10,9 +10,10 @@ echo "PUBLICAÇÃO:  " . $_POST[ 'IdPublicacao' ] . "<br />";
     // INSERE CITAÇÃO 
     //
 
-$query1 = "INSERT INTO citacao (CitPg, CitCitacao, CitComentario, IdPublicacao ) ";
+$query1 = "INSERT INTO citacao (CitPg, CitCitacao, CitPosKindle, CitComentario, IdPublicacao ) ";
 $query1 .= "VALUES ('"; 
 $query1 .= $_POST[ 'CitPg' ] . "', '";
+$query1 .= $_POST[ 'CitPosKindle' ] . "', '";
 $query1 .= filter_var( $_POST[ 'CitCitacao' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
 $query1 .= filter_var( $_POST[ 'CitComentario' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
 $query1 .= $_POST[ 'IdPublicacao' ].  "'); ";
@@ -24,9 +25,6 @@ $result1 = mysqli_query( $connection, $query1 );
 if ( !$result1 ) {
     die( "1. Query falhou.");
 }
-    //
-    // INSERE NOVAS ASSOCIAÇÕES ENTRE AUTOR E PUBLICACAO
-    //
 
 $last_id = mysqli_insert_id($connection);
 echo "LAST ID: " . $last_id . "<br />";

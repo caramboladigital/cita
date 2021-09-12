@@ -74,10 +74,18 @@ confirmacao_logado();
                 ?>
 
                 <input id="IdCitacao" type="hidden" name="IdCitacao" class="IdCitacao" size="0" value="<?php echo $row4[ 'IdCitacao' ] ?>">
-                <p><?php echo xpre("Página"); ?></p>
-                <input id="CitPg" name="CitPg" class="CitPg" size="8" value="<?php echo $row4[ 'CitPg' ] ?>">
-                <p><?php echo xpre("Citação"); ?></p>
-                <textarea rows="10" cols="80" id="CitCitacao" name="CitCitacao" class="CitCitacao"><?php echo $row4[ 'CitCitacao' ] ?></textarea>
+                <div id="blocoCitPg">
+                  <p><?php echo xpre("Página"); ?></p>
+                  <input id="CitPg" name="CitPg" class="CitPg" size="8" value="<?php echo $row4[ 'CitPg' ] ?>">
+                  </div>
+                <div id="blocoCitPosKindle">
+                  <p><?php echo xpre("Pos. Kindle"); ?></p>
+                  <input id="CitPosKindle" name="CitPosKindle" class="CitPosKindle" size="8" value="<?php echo $row4[ 'CitPosKindle' ] ?>">
+                </div>
+                <div id="blocoCitacao">
+                  <p><?php echo xpre("Citação"); ?></p>
+                  <textarea rows="10" cols="80" id="CitCitacao" name="CitCitacao" class="CitCitacao"><?php echo $row4[ 'CitCitacao' ] ?></textarea>
+                </div>
                 <p><?php echo xpre("Comentário"); ?></p>
                 <textarea rows="10" cols="80" id="CitComentario" name="CitComentario" class="CitComentario" size="50"><?php echo $row4[ 'CitComentario' ] ?></textarea>
                 <button class="botao" type="submit" name="submit"><?php echo xpre("Altera citação"); ?></button>

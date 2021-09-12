@@ -43,7 +43,7 @@ confirmacao_logado();
                     die( "1. Query falhou." );
                 }
                 ?>
-                <select multiple name="listPalavra[]" id="listPalavra" style="width:200px;" class="listPalavra" size=20>
+                <select multiple name="listaPalavra[]" id="listaPalavra" class="listaPalavra" size=20>
                     <?php
                     while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
                         echo "<option value = '" . $row1[ 'IdPalavra' ] . "'>" . $row1[ 'PalPalavra' ] . "</option>";
@@ -59,10 +59,18 @@ confirmacao_logado();
                         echo "<input id='IdPublicacao' type='hidden' name='IdPublicacao' class='IdPublicacao' size='0' ";
                         echo "value=" . $IdPublicacao . " >";
                     ?>
-                    <p>Página:</p>
-                    <input id="CitPg" name="CitPg" class="CitPg" size="5" >
-                    <p>Citação:</p>
-                    <textarea rows="10" cols="80" id="CitCitacao" name="CitCitacao" class="CitCitacao"></textarea>
+                    <div id="blocoCitPg">
+                      <p>Página:</p>
+                      <input id="CitPg" name="CitPg" class="CitPg" size="5" >
+                    </div>
+                    <div id="blocoCitPosKindle">
+                      <p>Pos. Kindle:</p>
+                      <input id="CitPosKindle" name="CitPosKindle" class="CitPosKindle" size="5" >
+                    </div></br>
+                    <div id="blocoCitacao">
+                      <p>Citação:</p>
+                      <textarea rows="10" cols="80" id="CitCitacao" name="CitCitacao" class="CitCitacao"></textarea>
+                    </div>
                     <p>Comentário:</p>
                     <textarea rows="10" cols="80" id="CitComentario" name="CitComentario" class="CitComentario" size="50"></textarea>
                     <br /><br />

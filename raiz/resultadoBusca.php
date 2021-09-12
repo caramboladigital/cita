@@ -42,6 +42,12 @@ confirmacao_logado();
                 mostraPublicacao( $row1["IdPublicacao"] );
                 echo "</p><hr>";
                 echo "<p>";
+                if ($_SESSION["ehAdmin"]) {
+                  echo "<a href='editaPalavraCitacao.php?IdCitacao=" . $row1['IdCitacao'] . "' >" . retornaBotao("editar") . "</a>";
+                  echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row1["IdPublicacao"] . "&msgDelIdCitacao=" . $row1['IdCitacao'] . "' >" . retornaBotao("deletar") . "</a>";
+                  echo "<br />";
+                }
+
                 mostraCitacao($row1[ 'IdCitacao' ]);
                 echo "</p>";
                 //echo "<hr>";

@@ -70,6 +70,9 @@ function mostraCitacao($IdCitacao)
   if ($row["CitPg"]) {
     echo "<strong>" . xpre("Página") . ": </strong> " . $row["CitPg"] . "<br />";
   }
+  if ($row["CitPosKindle"]) {
+    echo "<strong>" . xpre("Pos. Kindle") . ": </strong> " . $row["CitPosKindle"] . "<br />";
+  }
   echo "<strong>" . xpre("Citação") . ": </strong> <br /><span class='citacao'>" . $row["CitCitacao"] . "</span><br />";
 
   mostraReferenciaCurta($IdCitacao);

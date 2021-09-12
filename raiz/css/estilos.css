@@ -297,6 +297,19 @@ a:hover img.ico {
     font-style: italic;
 }
 
+#blocoCitPg {
+    float: left;
+}
+
+#blocoCitPosKindle {
+    float: left;
+    margin-left: 15px;
+}
+
+#blocoCitacao {
+    clear: both;
+}
+
 .listaPalavra {
     width: 200px;
 }

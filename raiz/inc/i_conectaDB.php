@@ -4,7 +4,7 @@ $dbhost = "localhost";
 //  DB teste
 $dbuser = "root";
 $dbpass = "";
-$dbname = "cita-teste";
+$dbname = "carambol_citacoes";
 
 global $connection;
 $connection = mysqli_connect( $dbhost, $dbuser, $dbpass, $dbname );
