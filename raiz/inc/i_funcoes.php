@@ -14,6 +14,12 @@ function mostraPublicacao($IdPublicacao)
 
   $row = mysqli_fetch_assoc($result);
 
+  /*   if ($_SESSION["ehAdmin"]) {
+    echo "&nbsp;";
+    echo "<a href='editaAutorPublicacao.php?IdPublicacao=" . $row["IdPublicacao"] . "'>" . retornaBotao("editar") . "</a>";
+    echo "<a href='listaAutorPublicacao.php?msgDelIdPublicacao=" . $row['IdPublicacao'] . "' >" . retornaBotao("deletar") . "</a>";
+  } */
+
   if ($row["PubArtigo"]) {
     echo "<span class='artigo'>" . $row["PubArtigo"] . "</span> In: ";
   }
@@ -367,21 +373,49 @@ function xpre($texto)
 
 function tiraAcento($letra)
 {
-  switch($letra) {
-    case "À": return "A"; break;
-    case "Á": return "A"; break;
-    case "É": return "E"; break;
-    case "Í": return "I"; break;
-    case "Ó": return "O"; break;
-    case "Ú": return "U"; break;
-    case "Ã": return "A"; break;
-    case "Õ": return "O"; break;
-    case "á": return "A"; break;
-    case "é": return "E"; break;
-    case "í": return "I"; break;
-    case "ó": return "O"; break;
-    case "ú": return "U"; break;
-    default: return $letra; break;
+  switch ($letra) {
+    case "À":
+      return "A";
+      break;
+    case "Á":
+      return "A";
+      break;
+    case "É":
+      return "E";
+      break;
+    case "Í":
+      return "I";
+      break;
+    case "Ó":
+      return "O";
+      break;
+    case "Ú":
+      return "U";
+      break;
+    case "Ã":
+      return "A";
+      break;
+    case "Õ":
+      return "O";
+      break;
+    case "á":
+      return "A";
+      break;
+    case "é":
+      return "E";
+      break;
+    case "í":
+      return "I";
+      break;
+    case "ó":
+      return "O";
+      break;
+    case "ú":
+      return "U";
+      break;
+    default:
+      return $letra;
+      break;
   }
 }
 

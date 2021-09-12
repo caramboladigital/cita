@@ -77,8 +77,18 @@ confirmacao_logado();
             if (!$result5) {
               die("5. Query falhou." . $query5);
             }
+
+
+
             if ($ultPub != $row4["IdPublicacao"]) {
               echo "<p class='blocoPublicacao'>";
+              if ($_SESSION["ehAdmin"]) {
+                echo "&nbsp;";
+                echo "<a href='editaAutorPublicacao.php?IdPublicacao=" . $row4['IdPublicacao'] . "' >" . retornaBotao("editar") . "</a>";
+                echo "<a href='listaAutorPublicacao.php?msgDelIdPublicacao=" . $row4['IdPublicacao'] . "' >" . retornaBotao("deletar") . "</a>";
+              }
+              echo "<a alt='editar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row4['IdPublicacao'] . "' >" . retornaBotao("ver") . "</a>";
+              echo "<br />";
               while ($row5 = mysqli_fetch_assoc($result5)) {
                 $query6 = "SELECT * ";
                 $query6 .= "FROM autor ";
@@ -107,8 +117,9 @@ confirmacao_logado();
           if ($_SESSION["ehAdmin"]) {
             echo "<a href='editaPalavraCitacao.php?IdCitacao=" . $row2["IdCitacao"] . "' >" . retornaBotao("editar") . "</a>";
             echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3["IdPublicacao"] . "&msgDelIdCitacao=" . $row2["IdCitacao"] . "' >" . retornaBotao("deletar") . "</a>";
+            echo "<br />";
           }
-          echo "<br />";
+
           mostraCitacao($row3["IdCitacao"]);
         }
       }
