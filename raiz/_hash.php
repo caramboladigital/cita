@@ -12,7 +12,7 @@
 
     
     <?php     
-        $password =utf8_encode("admin");
+        $password =utf8_encode("pitonisa");
         echo $password . "<br />";
         $hash = hash('sha256', $password);
 

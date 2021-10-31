@@ -16,8 +16,7 @@ confirmacao_logado();
   <div id="divGeral">
     <?php include_once("inc/i_topo.php"); ?>
     <?php
-    
-    $ultLetraAutor = "";
+
     $ultPub = "";
     $IdPalavra =  $_GET['IdPalavra'];
     $query1 = "SELECT * ";
@@ -34,7 +33,7 @@ confirmacao_logado();
 
     while ($row1 = mysqli_fetch_assoc($result1)) {
 
-      echo "<h1>".  xpre("Palavra-chave"). ": " . $row1["PalPalavra"] . "</h1>";
+      echo "<h1>" .  xpre("Palavra-chave") . ": " . $row1["PalPalavra"] . "</h1>";
 
       $query2 = "SELECT * ";
       $query2 .= "FROM cit_pal ";
@@ -90,12 +89,9 @@ confirmacao_logado();
                   die("6. Query falhou." . $query6);
                 }
                 $row6 = mysqli_fetch_assoc($result6);
-                //
-                // MOSTRA AUTOR
-                //
+
                 mostraAutor($row5["IdAutor"]);
                 echo ". ";
-                
               }
               //
               // MOSTRA PUBLICACAO
@@ -109,8 +105,8 @@ confirmacao_logado();
           echo "</p><hr>";
 
           if ($_SESSION["ehAdmin"]) {
-            echo "<a alt='editar' href='editaPalavraCitacao.php?IdCitacao=" . $row2["IdCitacao"] . "' ><img class='ico' width = '16px' height = 16px' title = 'editar' src = 'img/ico/editar.png'></a>";
-            echo "<a alt='deletar' href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3["IdPublicacao"] . "&msgDelIdCitacao=" . $row2["IdCitacao"] . "' ><img class='ico' width = '16px' height = 16px' title = 'deletar' src = 'img/ico/menos.png'></a>";
+            echo "<a href='editaPalavraCitacao.php?IdCitacao=" . $row2["IdCitacao"] . "' >" . retornaBotao("editar") . "</a>";
+            echo "<a href='listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $row3["IdPublicacao"] . "&msgDelIdCitacao=" . $row2["IdCitacao"] . "' >" . retornaBotao("deletar") . "</a>";
           }
           echo "<br />";
           mostraCitacao($row3["IdCitacao"]);

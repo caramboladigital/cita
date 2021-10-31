@@ -5,13 +5,13 @@ include_once( "inc/i_funcoes.php" );
     // ATUALIZA PUBLICAÇÃO
 
     $query1 = "UPDATE publicacao ";
-    $query1 .= "SET PubTitulo = '".  filter_var( $_POST[ 'PubTitulo' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', ";
-    $query1 .= "PubLocal = '". filter_var( $_POST[ 'PubLocal' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', ";
-    $query1 .= "PubEditora = '".  filter_var( $_POST[ 'PubEditora' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', ";
+    $query1 .= "SET PubTitulo = '".  addslashes( $_POST[ 'PubTitulo' ] ) . "', ";
+    $query1 .= "PubLocal = '". addslashes( $_POST[ 'PubLocal' ] ) . "', ";
+    $query1 .= "PubEditora = '".  addslashes( $_POST[ 'PubEditora' ] ) . "', ";
     $query1 .= "PubAno = '". $_POST[ 'PubAno' ] . "', ";
-    $query1 .= "PubUrl = '".  filter_var( $_POST[ 'PubUrl' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', ";
+    $query1 .= "PubUrl = '".  addslashes( $_POST[ 'PubUrl' ] ) . "', ";
     $query1 .= "PubDataDeAcesso = '". $_POST[ 'PubDataDeAcesso' ] . "', ";
-    $query1 .= "PubArtigo = '".  filter_var( $_POST[ 'PubArtigo' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "' ";
+    $query1 .= "PubArtigo = '".  addslashes( $_POST[ 'PubArtigo' ] ) . "' ";
     $query1 .= "WHERE IdPublicacao = " . $_POST[ 'IdPublicacao' ] ;
     mysqli_set_charset( $connection, "utf8" );
     $result1 = mysqli_query( $connection, $query1 );

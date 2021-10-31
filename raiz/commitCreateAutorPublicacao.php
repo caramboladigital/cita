@@ -4,14 +4,16 @@ include_once( "inc/i_funcoes.php" );
 
 $query1 = "INSERT INTO publicacao (PubTitulo, PubLocal, PubEditora, PubAno, PubUrl, PubDataDeAcesso, PubArtigo ) ";
 $query1 .= "VALUES ('"; 
-$query1 .= filter_var( $_POST[ 'PubTitulo' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
-$query1 .= filter_var( $_POST[ 'PubLocal' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
-$query1 .= filter_var( $_POST[ 'PubEditora' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
+$query1 .= addslashes( $_POST[ 'PubTitulo' ]) . "', '";
+$query1 .= addslashes( $_POST[ 'PubLocal' ]) . "', '";
+$query1 .= addslashes( $_POST[ 'PubEditora' ]) . "', '";
 $query1 .= $_POST[ 'PubAno' ].  "', '";
-$query1 .= filter_var( $_POST[ 'PubUrl' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
-$query1 .= filter_var( $_POST[ 'PubDataDeAcesso' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
-$query1 .= filter_var( $_POST[ 'PubArtigo' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "'); "; 
-                                                                            
+$query1 .= addslashes( $_POST[ 'PubUrl' ]) . "', '";
+$query1 .= addslashes( $_POST[ 'PubDataDeAcesso' ]) . "', '";
+$query1 .= addslashes( $_POST[ 'PubArtigo' ]) . "'); "; 
+
+
+
 echo "Q3:". $query1 . "<br />";
 mysqli_set_charset( $connection, "utf8" );
 $result1 = mysqli_query( $connection, $query1 );

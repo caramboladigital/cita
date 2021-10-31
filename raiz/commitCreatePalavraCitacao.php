@@ -14,8 +14,8 @@ $query1 = "INSERT INTO citacao (CitPg, CitCitacao, CitPosKindle, CitComentario, 
 $query1 .= "VALUES ('"; 
 $query1 .= $_POST[ 'CitPg' ] . "', '";
 $query1 .= $_POST[ 'CitPosKindle' ] . "', '";
-$query1 .= filter_var( $_POST[ 'CitCitacao' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
-$query1 .= filter_var( $_POST[ 'CitComentario' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', '";
+$query1 .= addslashes( $_POST[ 'CitCitacao' ] ) . "', '";
+$query1 .= addslashes( $_POST[ 'CitComentario' ] ) . "', '";
 $query1 .= $_POST[ 'IdPublicacao' ].  "'); ";
 
                                                                             

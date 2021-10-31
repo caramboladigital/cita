@@ -7,8 +7,8 @@ include_once( "inc/i_funcoes.php" );
     $query1 = "UPDATE citacao ";
     $query1 .= "SET CitPg = '".  $_POST[ 'CitPg' ] . "', ";
     $query1 .= "CitPosKindle = '".  $_POST[ 'CitPosKindle' ] . "', ";
-    $query1 .= "CitCitacao = '". filter_var( $_POST[ 'CitCitacao' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "', ";
-    $query1 .= "CitComentario = '".  filter_var( $_POST[ 'CitComentario' ], FILTER_SANITIZE_MAGIC_QUOTES ) . "' ";
+    $query1 .= "CitCitacao = '". addslashes( $_POST[ 'CitCitacao' ] ) . "', ";
+    $query1 .= "CitComentario = '".  addslashes( $_POST[ 'CitComentario' ] ) . "' ";
     $query1 .= "WHERE IdCitacao = " . $_POST[ 'IdCitacao' ] ;
     
     echo "Q1:". $query1 . "<br />";

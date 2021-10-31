@@ -2,8 +2,8 @@
 $dbhost = "localhost";
 
 //  DB teste
-$dbuser = "carambol_citacoes";
-$dbpass = 'PtNs06$vo';
+$dbuser = "root";
+$dbpass = "";
 $dbname = "carambol_citacoes";
 
 global $connection;
