@@ -1,7 +1,5 @@
 <?php
 
-// Este é a página de busca
-
 include_once( "inc/i_session.php" );
 include_once( "inc/i_conectaDB.php" );
 include_once( "inc/i_funcoes.php" );
