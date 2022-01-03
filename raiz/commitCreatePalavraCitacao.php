@@ -4,13 +4,7 @@ include_once( "inc/i_funcoes.php" );
 include_once( "inc/i_conectaDB.php" );
 
 
-echo "PUBLICAÇÃO:  " . $_POST[ 'IdPublicacao' ] . "<br />"; 
-
-    //
-    // INSERE CITAÇÃO 
-    //
-
-$query1 = "INSERT INTO citacao (CitPg, CitCitacao, CitPosKindle, CitComentario, IdPublicacao ) ";
+$query1 = "INSERT INTO citacao (CitPg, CitPosKindle, CitCitacao, CitComentario, IdPublicacao ) ";
 $query1 .= "VALUES ('"; 
 $query1 .= $_POST[ 'CitPg' ] . "', '";
 $query1 .= $_POST[ 'CitPosKindle' ] . "', '";
@@ -20,6 +14,7 @@ $query1 .= $_POST[ 'IdPublicacao' ].  "'); ";
 
                                                                             
 echo "Q1:". $query1 . "<br />";
+
 mysqli_set_charset( $connection, "utf8" );
 $result1 = mysqli_query( $connection, $query1 );
 if ( !$result1 ) {
@@ -28,7 +23,6 @@ if ( !$result1 ) {
 
 $last_id = mysqli_insert_id($connection);
 echo "LAST ID: " . $last_id . "<br />";
-
 
 foreach ($_POST['listPalavra'] as $id) {
     $query2 = "INSERT INTO cit_pal ( IdCitacao , IdPalavra) ";

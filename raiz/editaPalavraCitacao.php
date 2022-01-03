@@ -31,7 +31,7 @@ confirmacao_logado();
                 mysqli_set_charset( $connection, "utf8" );
                 $result1 = mysqli_query( $connection, $query1 );
                 if ( !$result1 ) {
-                    die( "1. Query falhou: " . query1 . "<br />" );
+                    die( "1. Query falhou: " . $query1 . "<br />" );
                 }
                 //
                 $IdCitacao = $_GET[ 'IdCitacao' ];
@@ -47,7 +47,7 @@ confirmacao_logado();
                         mysqli_set_charset( $connection, "utf8" );
                         $result2 = mysqli_query( $connection, $query2 );
                         if ( !$result2 ) {
-                            die( "2. Query falhou: " . query2 . "<br />" );
+                            die( "2. Query falhou: " . $query2 . "<br />" );
                         }
                         while ($row2 = mysqli_fetch_assoc( $result2 ) ){
                             //echo "Resultado de Q2: ". $row2 [ 'IdAutor' ] ; 

@@ -43,7 +43,7 @@ confirmacao_logado();
                     die( "1. Query falhou." );
                 }
                 ?>
-                <select multiple name="listaPalavra[]" id="listaPalavra" class="listaPalavra" size=20>
+                <select multiple name="listPalavra[]" id="listPalavra" class="listPalavra" size=20>
                     <?php
                     while ( $row1 = mysqli_fetch_assoc( $result1 ) ) {
                         echo "<option value = '" . $row1[ 'IdPalavra' ] . "'>" . $row1[ 'PalPalavra' ] . "</option>";

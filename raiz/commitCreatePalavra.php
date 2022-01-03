@@ -2,6 +2,7 @@
 include_once( "inc/i_conectaDB.php" );
 include_once( "inc/i_funcoes.php" );
 
+// aqui vai uma observação
 
 $query3 = "INSERT INTO palavra (PalPalavra) ";
 $query3 .= "VALUES ('" . $_POST[ 'PalPalavra' ] . "'); ";

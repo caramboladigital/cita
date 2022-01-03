@@ -10,7 +10,7 @@ $query1 .= addslashes( $_POST[ 'PubEditora' ]) . "', '";
 $query1 .= $_POST[ 'PubAno' ].  "', '";
 $query1 .= addslashes( $_POST[ 'PubUrl' ]) . "', '";
 $query1 .= addslashes( $_POST[ 'PubDataDeAcesso' ]) . "', '";
-$query1 .= addslashes( $_POST[ 'PubArtigo' ]) . "'); "; 
+$query1 .= addslashes( $_POST[ 'PubArtigo' ]) . "');"; 
 
 
 
@@ -24,10 +24,8 @@ if ( !$result1 ) {
 
     // INSERE NOVAS ASSOCIAÇÕES ENTRE AUTOR E PUBLICACAO
 
-
 $last_id = mysqli_insert_id($connection);
 echo "LAST ID: " . $last_id . "<br />";
-
 
 foreach ($_POST['listAutor'] as $id) {
     $query2 = "INSERT INTO aut_pub ( IdPublicacao , IdAutor) ";
@@ -42,7 +40,9 @@ foreach ($_POST['listAutor'] as $id) {
 
 
 
-header( "Location: listaAutorPublicacao.php?alteracao=success" );
+//header( "Location: listaAutorPublicacao.php?alteracao=success" );
+
+header( "Location: listaCitacoesDeUmaPublicacao.php?IdPublicacao=" . $last_id );
 
 mysqli_free_result($result1);
 mysqli_free_result($result2);

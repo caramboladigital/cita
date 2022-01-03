@@ -72,7 +72,8 @@ confirmacao_logado();
 
             $query5 = "SELECT * ";
             $query5 .= "FROM aut_pub ";
-            $query5 .= "WHERE IdPublicacao = " . $row4["IdPublicacao"];
+            $query5 .= "WHERE IdPublicacao = " . $row4["IdPublicacao"] . " ";
+            $query5 .= "ORDER BY idAutor";
             $result5 = mysqli_query($connection, $query5);
             if (!$result5) {
               die("5. Query falhou." . $query5);
