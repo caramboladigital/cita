@@ -6,6 +6,7 @@ function mostraPublicacao($IdPublicacao)
   $query = "SELECT * ";
   $query .= "FROM publicacao ";
   $query .= "WHERE IdPublicacao = " .  $IdPublicacao  . " ";
+  $query .= "ORDER BY IdPublicacao";
   mysqli_set_charset($connection, "utf8");
   $result = mysqli_query($connection, $query);
   if (!$result) {
@@ -208,6 +209,7 @@ function mostraAutor($IdAutor)
   $query = "SELECT * ";
   $query .= "FROM autor ";
   $query .= "WHERE IdAutor = " . $IdAutor . " ";
+  $query .= "ORDER BY IdAutor";
   mysqli_set_charset($connection, "utf8");
   $result = mysqli_query($connection, $query);
   if (!$result) {
@@ -321,9 +323,6 @@ function mostraPalavrasDeCitacao($IdCitacao)
   }
 }
 
-
-
-
 function confirmaLogin()
 {
   if (!isset($_SESSION['IdUsuario'])) {
@@ -331,7 +330,6 @@ function confirmaLogin()
     echo "sessão não definida";
   }
 }
-
 
 function modal($id, $elemento, $msg, $apaga, $volta)
 {
@@ -346,9 +344,6 @@ function modal($id, $elemento, $msg, $apaga, $volta)
   echo "</div>";
   echo "</div>";
 }
-
-
-
 
 function xpre($texto)
 {

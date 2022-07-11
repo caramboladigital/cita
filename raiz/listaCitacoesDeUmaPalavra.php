@@ -49,7 +49,8 @@ confirmacao_logado();
 
         $query3 = "SELECT IdPublicacao, IdCitacao ";
         $query3 .= "FROM citacao ";
-        $query3 .= "WHERE IdCitacao =" . $row2["IdCitacao"];
+        $query3 .= "WHERE IdCitacao =" . $row2["IdCitacao"] . " ";
+        $query3 .= "ORDER BY IdPublicacao;";
         $result3 = mysqli_query($connection, $query3);
         if (!$result3) {
           die("3. Query falhou: " . $query3);
@@ -60,7 +61,8 @@ confirmacao_logado();
           $query4 = "SELECT * ";
           $query4 .= "FROM publicacao ";
           $query4 .= "WHERE IdPublicacao = " .  $row3["IdPublicacao"] . " ";
-          $query4 .= "ORDER BY PubTitulo;";
+          //$query4 .= "ORDER BY PubTitulo;";
+          $query4 .= "ORDER BY IdPublicacao;";
 
           mysqli_set_charset($connection, "utf8");
           $result4 = mysqli_query($connection, $query4);
@@ -73,7 +75,7 @@ confirmacao_logado();
             $query5 = "SELECT * ";
             $query5 .= "FROM aut_pub ";
             $query5 .= "WHERE IdPublicacao = " . $row4["IdPublicacao"] . " ";
-            $query5 .= "ORDER BY idAutor";
+            //$query5 .= "ORDER BY idAutor";
             $result5 = mysqli_query($connection, $query5);
             if (!$result5) {
               die("5. Query falhou." . $query5);
@@ -93,7 +95,8 @@ confirmacao_logado();
               while ($row5 = mysqli_fetch_assoc($result5)) {
                 $query6 = "SELECT * ";
                 $query6 .= "FROM autor ";
-                $query6 .= "WHERE IdAutor =" .  $row5["IdAutor"];
+                $query6 .= "WHERE IdAutor =" .  $row5["IdAutor"] . " ";
+                $query6 .= "ORDER BY idAutor";
                 mysqli_set_charset($connection, "utf8");
                 $result6 = mysqli_query($connection, $query6);
                 if (!$result6) {
@@ -109,6 +112,7 @@ confirmacao_logado();
               //
               mostraPublicacao($row4["IdPublicacao"]);
               //echo "</p>";
+              echo "<a class='dir cima' href='#topo' >" . retornaBotao("cima") . "</a>";
               $ultPub = $row4["IdPublicacao"];
             }
           }
